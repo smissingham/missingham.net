@@ -18,3 +18,19 @@
   }
 }
 
+.search {
+  max-width: none;
+  flex-grow: 1000;
+}
+
+.search.mobile-only {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.profile-picture.mobile-only {
+  margin: 15px;
+  img {
+    max-height: 6em;
+  }
+}

@@ -16,7 +16,13 @@ export default ((opts?: Options) => {
         <hr />
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
-          <a href="https://quartz.jzhao.xyz/">Quartz</a> © {year}
+          <a href="https://obsidian.md/">Obsidian</a>
+          &nbsp;and&nbsp;
+          <a href="https://quartz.jzhao.xyz/">Quartz</a>
+          .
+        </p>
+        <p>
+          Copyright © Sean Missingham {year}. All rights reserved. All works licensed under CC BY 4.0.
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (

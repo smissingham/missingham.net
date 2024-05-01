@@ -20,9 +20,19 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+
   ],
   left: [
     Component.PageTitle(),
+    Component.DesktopOnly(Component.Darkmode()),
+    Component.MobileOnly(
+      Component.ProfilePicture({
+        link: "https://avatars.githubusercontent.com/u/9065495?v=4",
+      }),
+    ),
+    Component.MobileOnly(Component.Spacer()),
+    Component.MobileOnly(Component.Search()),
+    Component.MobileOnly(Component.Darkmode()),
     Component.DesktopOnly(
       Component.ProfilePicture({
         link: "https://avatars.githubusercontent.com/u/9065495?v=4",
@@ -37,12 +47,10 @@ export const defaultContentPageLayout: PageLayout = {
         ],
       }),
     ),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
+    Component.DesktopOnly(Component.Search()),
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),

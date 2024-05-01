@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Sean Missingham's Second Brain",
+    pageTitle: "Sean Missingham's \"Second Brain\"",
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
@@ -20,7 +20,7 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
+        header: "Cabin",
         body: "Ubuntu",
         code: "Fira Code",
       },
