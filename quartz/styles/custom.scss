@@ -1,3 +1,20 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// tablet width
+@media (min-width: 768px) {
+
+}
+
+// full width
+@media (min-width: 1512px) {
+  .social-links {
+    margin-top: -25px !important;
+
+    a.social-link {
+      margin-right: 15px;
+    }
+  }
+}
+

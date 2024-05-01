@@ -23,16 +23,22 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    Component.Search(),
-    Component.ProfilePicture({
-      link: "https://avatars.githubusercontent.com/u/9065495?v=4",
-    }),
-    Component.SocialLinks({
-      links: [
-        "https://github.com/smissingham",
-      ],
-    }),
+    Component.DesktopOnly(
+      Component.ProfilePicture({
+        link: "https://avatars.githubusercontent.com/u/9065495?v=4",
+      }),
+    ),
+    Component.DesktopOnly(
+      Component.SocialLinks({
+        links: [
+          "https://www.linkedin.com/in/sean-missingham/",
+          "https://github.com/smissingham",
+          "https://twitter.com/smissingham",
+        ],
+      }),
+    ),
     Component.MobileOnly(Component.Spacer()),
+    Component.Search(),
     Component.Darkmode(),
     Component.DesktopOnly(Component.Explorer()),
   ],

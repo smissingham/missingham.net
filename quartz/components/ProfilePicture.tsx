@@ -10,7 +10,7 @@ export default ((opts?: Options) => {
   const ProfilePicture: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
     return (
       <div class={classNames(displayClass, "profile-picture")}>
-       <img src={opts?.link} alt="Profile Picture" />
+        <img src={opts?.link} alt="Profile Picture" />
       </div>
     )
   }

@@ -9,4 +9,4 @@ I love to build & experiment with new technologies, applying my passion for soft
 My professional experience revolves primarily around revenue management, 
 so you'll find this blog to be a mix of revenue related software engineering & data analysis topics. 
 
-Take a look around!
+This space is brand new as of May '24, please take a look at my [[Works In Progress]] to see what's coming
