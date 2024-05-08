@@ -39,7 +39,11 @@ export const defaultContentPageLayout: PageLayout = {
         "https://twitter.com/smissingham",
       ],
     }),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.Explorer({
+      title: "Explore",
+      useSavedState: true,
+      filterFn: (node) => !node.name.startsWith("_")
+    })),
   ],
   right: [
     Component.Graph(),
