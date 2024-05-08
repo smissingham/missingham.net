@@ -20,37 +20,28 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
-
   ],
   left: [
-    Component.PageTitle(),
-    Component.DesktopOnly(Component.Darkmode()),
-    Component.MobileOnly(
-      Component.ProfilePicture({
-        link: "https://avatars.githubusercontent.com/u/9065495?v=4",
-      }),
-    ),
+    Component.ComponentGroup({
+      parentClass: "title-search",
+      children: [
+        Component.PageTitle(),
+        Component.Search(),
+      ],
+    }),
+    Component.Spacer(),
     Component.MobileOnly(Component.Spacer()),
-    Component.MobileOnly(Component.Search()),
-    Component.MobileOnly(Component.Darkmode()),
-    Component.DesktopOnly(
-      Component.ProfilePicture({
-        link: "https://avatars.githubusercontent.com/u/9065495?v=4",
-      }),
-    ),
-    Component.DesktopOnly(
-      Component.SocialLinks({
-        links: [
-          "https://www.linkedin.com/in/sean-missingham/",
-          "https://github.com/smissingham",
-          "https://twitter.com/smissingham",
-        ],
-      }),
-    ),
+    Component.ProfilePicture({
+      profileImage: "https://avatars.githubusercontent.com/u/9065495?v=4",
+      socialLinks: [
+        "https://www.linkedin.com/in/sean-missingham/",
+        "https://github.com/smissingham",
+        "https://twitter.com/smissingham",
+      ],
+    }),
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    Component.DesktopOnly(Component.Search()),
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),

@@ -21,6 +21,7 @@ import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import SocialLinks from "./SocialLinks"
 import ProfilePicture from "./ProfilePicture"
+import ComponentGroup from "./ComponentGroup"
 
 export {
   ArticleTitle,
@@ -45,5 +46,6 @@ export {
   NotFound,
   Breadcrumbs,
   SocialLinks,
-  ProfilePicture
+  ProfilePicture,
+  ComponentGroup
 }

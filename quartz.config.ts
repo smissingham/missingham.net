@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Sean Missingham's \"Second Brain\"",
+    pageTitle: "Sean Missingham's Notes",
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
@@ -31,9 +31,9 @@ const config: QuartzConfig = {
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
           dark: "#2b2b2b",
-          secondary: "SandyBrown",
+          secondary: "#BA4A00",
           tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          highlight: "rgba(0,0,0,0.05)",
         },
         darkMode: {
           light: "#161618",
@@ -44,7 +44,7 @@ const config: QuartzConfig = {
           //secondary: "#7b97aa",
           secondary: "SandyBrown", // Title & Accents Color
           tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          highlight: "rgba(255,255,255,0.05)",
         },
       },
     },
