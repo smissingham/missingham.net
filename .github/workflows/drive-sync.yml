@@ -1,12 +1,16 @@
-name: Schedule Download and Sync from Google Drive
+name: Google Drive Sync
 
 on:
+  workflow_dispatch:
   schedule:
     # 12 hourly
     - cron: '0 */12 * * *'
 
 permissions: 
   contents: write
+
+env:
+    CONTENT_DIR: "./content"
 
 jobs:
     download_and_sync:
@@ -29,28 +33,37 @@ jobs:
                   python -m pip install --upgrade pip
                   pip install gdown
 
+            - name: Delete Existing Content
+              run: |
+                rm -rf ${{ env.CONTENT_DIR }}          
+
+
             - name: Download files from Google Drive
-              env: 
+              env:
                 OUTPUT_DIR: "./content"
               run: |
                   gdown --folder --id "${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}" --output "${{ env.OUTPUT_DIR }}"
                   ls -al ${{ env.OUTPUT_DIR }}
 
-            - name: Check diff
+            - name: Commit Diff
               run: |
-                    datetime=$(date +'%Y-%m-%d')
-                    diff=$(git diff --name-only)
-                    if [ -n "$diff" ]; then
-                        echo "Files have changed. Committing changes..."
-                        git config user.email "${{ github.actor }}@users.noreply.github.com"
-                        git config user.name "${{ github.actor }}"
-                        git add .
-                        git commit -m "Google Drive Sync $datetime"
-                        git push origin ${{ github.head_ref || github.ref }}
-                    else
-                        echo "No changes detected."
-                    fi
+                git config user.email "${{ github.actor }}@users.noreply.github.com"
+                git config user.name "${{ github.actor }}"
+                git add .
+                git commit -m "Drive sync: $(date +'%B %d, %Y %H:%M %p')" || echo "No changes to commit."
 
             - name: Push Commit
               run: |
-                    git push origin ${{ github.head_ref || github.ref }}
+                    git push origin ${{ github.head_ref || github.ref }} || echo "No changes to push."
+
+            - name: Trigger Deploy Workflow if Changes Were Pushed
+              env:
+                DEPLOY_FILE: "deploy.yml"
+              run: |
+                if [ -n "$(git diff --name-only HEAD^ HEAD)" ]; then
+                  echo "Changes detected. Triggering deploy workflow."
+                  export BRANCH_NAME=$(echo ${{ github.head_ref || github.ref }} | awk -F'/' '{print $NF}')
+                  curl -X POST -H "Authorization: Bearer ${{ secrets.GHUB_PERSONAL_ACCESS_TOKEN }}" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${{ github.repository }}/actions/workflows/${{ env.DEPLOY_FILE }}/dispatches -d "{\"ref\":\"$BRANCH_NAME\"}"
+                else
+                  echo "No changes detected. Skipping deploy workflow."
+                fi
