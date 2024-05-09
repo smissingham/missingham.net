@@ -2,6 +2,11 @@
 
 // put your custom CSS here!
 
+// one day I'll fix the dark mode toggle button,  for now it just looks junk
+.darkmode{
+  display: none;
+}
+
 // mobile only
 @media (min-width: 0px) and (max-width: 480px) {
 

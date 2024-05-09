@@ -31,6 +31,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.Spacer(),
     Component.MobileOnly(Component.Spacer()),
+    Component.DesktopOnly(Component.Darkmode()),
     Component.ProfilePicture({
       profileImage: "https://avatars.githubusercontent.com/u/9065495?v=4",
       socialLinks: [
@@ -59,8 +60,20 @@ export const defaultListPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.Darkmode()),
+    Component.ProfilePicture({
+      profileImage: "https://avatars.githubusercontent.com/u/9065495?v=4",
+      socialLinks: [
+        "https://www.linkedin.com/in/sean-missingham/",
+        "https://github.com/smissingham",
+        "https://twitter.com/smissingham",
+      ],
+    }),
+    Component.DesktopOnly(Component.Explorer({
+      title: "Explore",
+      useSavedState: true,
+      filterFn: (node) => !node.name.startsWith("_")
+    })),
   ],
   right: [],
 }
