@@ -1,4 +1,10 @@
-
+---
+tags:
+  - obsidian
+  - publishing
+  - github
+  - google-drive
+---
 I've been a paying subscriber of Obsidian Sync for about a year at this point, so I can sync notes between my phone, laptop and pc.
 
 I test-drove Obsidian Publish, but it was sorely lacking what I wanted in a publishing utility. 
@@ -36,7 +42,7 @@ I've landed on the following stack
 I'll spare the details on getting it all set up, that's been covered by [Nicole Vanderhoeven, here](https://notes.nicolevanderhoeven.com/How+to+publish+Obsidian+notes+with+Quartz+on+GitHub+Pages). 
 What I'll cover here are the extras.
 
-### Setting Up Excalidraw
+# Setting Up Excalidraw
 
 After installing the Excalidraw Obsidian plugin, we need to update some settings to get it playing nice with the publishing stack.
 
@@ -71,7 +77,7 @@ Component.Explorer({
 })
 ```
 
-### Auto-Publishing from Google Drive
+# Auto-Publishing from Google Drive
 
 Alright this one was a big effort, and I'm still testing its robustness. 
 Long story short, I'm using a scheduled Github Action to download the contents of a publicly accessible Google Drive folder link, then if there's updates it will commit to the Github repo.
@@ -88,10 +94,11 @@ Long story short, I'm using a scheduled Github Action to download the contents o
 After that, create a file called `drive-sync.yml` inside your `.github/workflows` and paste the content from the [yml linked above](https://github.com/smissingham/blog/blob/v4/.github/workflows/drive-sync.yml)
 
 
-Notes to expand on:
+Notes to expand on: 
+#wip 
 - Had to add `workflow_dispatch` to `deploy.yml` in order to be able to trigger it from another script
 - Had to create a personal access token to be able to dispatch the deploy action
 
 ### Preventing `.obsidian` folder download in Google Drive sync
-
+#wip 
 This one is a work in progress, but I've noticed that the contents of `.obsidian` are large, will continue to grow as I build on by obsidian install, and they get downloaded unnecessarily, every time. I need to work out a way in the above script with `gdown` to prevent the download of dot-folders.
