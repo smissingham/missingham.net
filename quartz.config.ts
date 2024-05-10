@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "Sean Missingham's Notes",
     enableSPA: true,
     enablePopovers: true,
-    analytics: { provider: "umami", host: "missingham.net", websiteId: "eba8a82b-2ca3-4947-a8b2-6e15f4ed9ae0" },
+    analytics: null, //{ provider: "umami", host: "missingham.net", websiteId: "eba8a82b-2ca3-4947-a8b2-6e15f4ed9ae0" },
     locale: "en-US",
     baseUrl: "missingham.net",
     ignorePatterns: ["private", "templates", ".obsidian"],
