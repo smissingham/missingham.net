@@ -2,11 +2,14 @@
 title: Welcome
 ---
 
-G'day, welcome to my ["Second Brain"](https://www.buildingasecondbrain.com/), where I aim to document my thoughts & experiments.
+G'day, welcome to my *[Digital Garden](https://quartz.jzhao.xyz/philosophy)*, where I keep my notes on thoughts, experiments, and how-to's.
 
 I love to build & experiment with new technologies, applying my passion for software wherever I can.
 
-My professional experience revolves primarily around revenue management, 
-so you'll find this blog to be a mix of revenue related software engineering & data analysis topics. 
+My professional experience revolves primarily around revenue management,  so you'll find this blog to be a mix of revenue related software engineering & data analysis topics. 
 
-This space is brand new as of May '24, please take a look at my [[Works-in-Progress]] to see what's coming
+This space is brand new as of May '24. Please take a look in the following spaces for my work so far
+- [[Apps--and--Tooling]]
+- [[Works-in-Progress]]
+
+Got an idea for a subject I should investigate? Reach out on [LinkedIn](https://www.linkedin.com/in/sean-missingham/)
