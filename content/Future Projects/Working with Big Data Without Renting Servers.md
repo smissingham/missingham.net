@@ -4,7 +4,6 @@ tags:
   - jupyter
   - pandas
   - spark
-  - hdfs
   - wip
 ---
 Ever wanted to work with a "big" data file without paying for rented cloud servers?

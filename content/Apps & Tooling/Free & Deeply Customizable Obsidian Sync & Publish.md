@@ -5,9 +5,6 @@ tags:
   - github
   - google-drive
 ---
-
-# The Objective
-
 I've been a paying subscriber of Obsidian Sync for about a year at this point, so I can sync notes between my phone, laptop and pc.
 
 I test-drove Obsidian Publish, but it was sorely lacking what I wanted in a publishing utility. 
@@ -45,7 +42,7 @@ I've landed on the following stack
 I'll spare the details on getting it all set up, that's been covered by [Nicole Vanderhoeven, here](https://notes.nicolevanderhoeven.com/How+to+publish+Obsidian+notes+with+Quartz+on+GitHub+Pages). 
 What I'll cover here are the extras.
 
-## Setting Up Excalidraw
+# Setting Up Excalidraw
 
 After installing the Excalidraw Obsidian plugin, we need to update some settings to get it playing nice with the publishing stack.
 
@@ -80,7 +77,7 @@ Component.Explorer({
 })
 ```
 
-## Auto-Publishing from Google Drive
+# Auto-Publishing from Google Drive
 
 Alright this one was a big effort, and I'm still testing its robustness. 
 Long story short, I'm using a scheduled Github Action to download the contents of a publicly accessible Google Drive folder link, then if there's updates it will commit to the Github repo.
