@@ -3,7 +3,9 @@ tags:
   - software-development
   - docker
   - wsl
-  - wip
+  - productivity
+  - windows
+  - tooling
 ---
 After over a decade as a professional software developer, I still use Windows as my primary operating system. Despite trying many Linux distros, and even an Apple 🫢 Macbook, I consistently return to Windows as my daily driver.
 
