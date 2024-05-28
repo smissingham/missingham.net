@@ -12,6 +12,7 @@
     "url": "https://github.com/jackyzha0/quartz.git"
   },
   "scripts": {
+    "drivesync": "powershell scripts/drivesync.ps1",
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
     "dev": "npx quartz build --serve --port 9000",
