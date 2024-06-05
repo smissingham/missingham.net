@@ -8,13 +8,13 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Sean Missingham's Notes",
+    pageTitle: "Smissingham's Notes",
     enableSPA: true,
     enablePopovers: true,
     analytics: null, //{ provider: "umami", host: "missingham.net", websiteId: "eba8a82b-2ca3-4947-a8b2-6e15f4ed9ae0" },
     locale: "en-US",
     baseUrl: "missingham.net",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private","@Private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",

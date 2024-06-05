@@ -24,7 +24,7 @@ I've landed on the following stack
 *Note: I also use Cloudflare for DNS & CDN, but that's optional so doesn't get a place on the diagram*
 
 ### My Keystone Requirements
-- I want to be able to publish to my [Digital Garden](index) from any device. Phone, Laptop or Desktop.
+- I want to be able to publish to my [Digital Garden](index.md) from any device. Phone, Laptop or Desktop.
 - I want to be able to deeply customise the appearance of it, with technologies I know
 - I want to use [Excalidraw in Obsidian](https://github.com/zsviczian/obsidian-excalidraw-plugin)!!!
 - I want it publicly hosted, for free, and I want it to be speedy

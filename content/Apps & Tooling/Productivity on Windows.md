@@ -48,7 +48,8 @@ Use in conjunction with [[#PowerToys]] for ultimate productivity.
 >`Win + Tab` Like Alt-Tab but for VD's.
 ## SysAdmin 💽
 
-### [Chocolatey](https://chocolatey.org/install)
+### Chocolatey 
+https://chocolatey.org/install
 
 A package manager for Windows. Like `brew` for Mac, or `apt-get` for Ubuntu.
 A developer/sysadmin dream for quickly installing software from reputable download sources.

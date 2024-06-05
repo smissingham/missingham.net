@@ -22,7 +22,7 @@ export default ((opts?: Options) => {
           .
         </p>
         <p>
-          Copyright © Sean Missingham {year}. All rights reserved. All works licensed under CC BY 4.0.
+          Copyright © {year}. All rights reserved. All works licensed under <a href={"https://creativecommons.org/licenses/by/4.0/deed.en"}>CC BY 4.0.</a>
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
