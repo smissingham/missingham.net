@@ -64,8 +64,13 @@ TLDR (For Windows):
 
 
 # Bonus: In Memory OLAP with DuckDB
+https://duckdb.org/
 
-Downside: doesn't support polars or spark lazy frames...
+Having worked extensively with SQL in my past, I've come to love using it. Being able to SQL-query a data file is amazing. No need to set up a dedicated SQL server, there are options out there for in-process SQL engines supporting massive file sizes. Above, I refer to Spark SQL support, but here's another option I've been experimenting with lately, 
+
+https://duckdb.org/docs/sql/introduction
+
+DuckDB appears to support Polars, Pandas and Spark dataframes natively, but doesn't support the LazyFrames so I'm not yet certain how it handles the Larger-than-Memory problem despite that being one of the taglines on the home page. I presume to support larger-than-mem data with duckdb, one must directly query the file and not use a dataframe intermediary.
 ## Honourable Mentions
 
 - Modin
