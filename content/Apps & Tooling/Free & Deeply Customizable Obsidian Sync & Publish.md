@@ -101,4 +101,10 @@ Notes to expand on:
 
 ### Preventing `.obsidian` folder download in Google Drive sync
 #wip 
-This one is a work in progress, but I've noticed that the contents of `.obsidian` are large, will continue to grow as I build on by obsidian install, and they get downloaded unnecessarily, every time. I need to work out a way in the above script with `gdown` to prevent the download of dot-folders.
+
+I noticed that the `.obsidian` folder in the root directory of my Obsidian notebook was growing larger with new plugins, and this caused the drivesync action to take a few minutes to download unnecessary data.
+
+Now, I have moved my Quartz content into a `@Public` folder inside my Obsidian notebook. This allows me to achieve two things:
+- Notes that are published must be explicitly, manually moved into the @Public folder. 
+	- This ensures I'll never accidentally publish something private
+- Ensures that the contents downloaded by the Github action are only that which is necessary for Quartz to publish, nothing more.

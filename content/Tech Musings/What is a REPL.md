@@ -1,7 +1,13 @@
+---
+tags:
+  - datascience
+  - coding
+---
 
 REPL stands for "Read Evaluate Print Loop", but that doesn't tell you a lot.
 
-In essence, a REPL is a software environment (usually a command-line interface) that allows a developer to write code and execute it, and have those values persist between interactions.
+> [!quote]
+> In essence, a REPL is a software environment (usually a command-line interface) that allows a developer to write code and execute it, and have those values persist between interactions.
 
 The best example of a REPL is the Chrome "Console" tab, which allows you to write Javascript and execute it. Then, write more javascript and execute it without losing state from the previous piece of code you wrote.
 

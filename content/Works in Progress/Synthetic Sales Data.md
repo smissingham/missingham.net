@@ -3,6 +3,8 @@ tags:
   - wip
   - big-data
 ---
+> [!warning] This page is a work in progress
+
 It's very common in software to need large swathes of synthetic data that *seems* legitimate.
 Common uses include stress testing pre-production environments, capability demos and more.
 
