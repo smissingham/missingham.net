@@ -49,7 +49,12 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
+    //Component.Backlinks(),
+    Component.MobileOnly(Component.Explorer({
+      title: "Explore",
+      useSavedState: true,
+      filterFn: (node) => !node.name.startsWith("_")
+    })),
   ],
 }
 
