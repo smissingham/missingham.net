@@ -1,18 +1,22 @@
-# Quartz v4
+# The Github Repo Behind My Blog
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+This is the git repository that I use to house my digital garden.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+The blog itself is hosted at https://missingham.net
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+You can reach me via email <a href="mailto:sean@missingham.net">sean@missingham.net</a>
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+I use a few tools for this, primarily these below. 
+Go show them some love!
 
-## Sponsors
+- [Quartz by Jacky Zhao](https://quartz.jzhao.xyz/)
+- [Obsidian.md](https://obsidian.md/)
 
+Thanks for stopping by!
+
+Sean
 <p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
+  <a href="https://missingham.net">
+    <img height="300" width="300" src="https://avatars.githubusercontent.com/u/9065495?v=4" />
   </a>
 </p>
