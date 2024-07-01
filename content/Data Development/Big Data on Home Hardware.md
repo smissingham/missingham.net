@@ -13,6 +13,8 @@ If you try to load this into Pandas, you'll quickly learn what an Out of Memory 
 
 Your first thought might be to go to AWS and rent an EC2 virtual machine with 200GB+ RAM and continue on using the tools you're used to. This works for some, but I encourage learning to adapt and using alternatives tools that support this use case on home hardware, no extra cost outlay! 
 
+To be clear, this article discusses "larger-than-memory" data sets. Those where the file size is greater than RAM on your local machine, but still fits on disk! For larger-than-storage data sets, there will be a follow up article.
+
 
 # Data Frame Libraries
 ___

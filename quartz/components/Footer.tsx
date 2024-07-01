@@ -22,7 +22,11 @@ export default ((opts?: Options) => {
           .
         </p>
         <p>
-          Copyright © {year}. All works licensed under <a href={"https://creativecommons.org/licenses/by/4.0/deed.en"}>CC BY 4.0.</a>
+          Copyright © {year}. All works licensed under <a href={"https://creativecommons.org/licenses/by/4.0/deed.en"}>CC
+          BY 4.0.</a>
+        </p>
+        <p>
+          Email Me <a href={"mailto:sean@missingham.net"}>sean@missingham.net</a>
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (

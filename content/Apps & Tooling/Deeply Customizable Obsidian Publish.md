@@ -94,15 +94,15 @@ Long story short, I'm using a scheduled Github Action to download the contents o
 After that, create a file called `drive-sync.yml` inside your `.github/workflows` and paste the content from the [yml linked above](https://github.com/smissingham/blog/blob/v4/.github/workflows/drive-sync.yml)
 
 
-Notes to expand on: 
-#wip 
-- Had to add `workflow_dispatch` to `deploy.yml` in order to be able to trigger it from another script
-- Had to create a personal access token to be able to dispatch the deploy action
+## Some extra notes
+- I had to add `workflow_dispatch` to `deploy.yml` in order to be able to trigger it from another script. I've opened a PR to see if this can be added to the core repo:
+	- PR1251: https://github.com/jackyzha0/quartz/pull/1251
+- I had to create a personal access token to be able to dispatch the deploy action from another github action.
+	- Docs here: https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow
 
-### Preventing `.obsidian` folder download in Google Drive sync
-#wip 
+### Preventing `.obsidian` folder download in Google Drive sync 
 
-I noticed that the `.obsidian` folder in the root directory of my Obsidian notebook was growing larger with new plugins, and this caused the drivesync action to take a few minutes to download unnecessary data.
+I noticed that the `.obsidian` folder in the root directory of my Obsidian notebook was growing larger with new plugins, and this caused the drive-sync action to take a few minutes to download unnecessary data.
 
 Now, I have moved my Quartz content into a `@Public` folder inside my Obsidian notebook. This allows me to achieve two things:
 - Notes that are published must be explicitly, manually moved into the @Public folder. 
