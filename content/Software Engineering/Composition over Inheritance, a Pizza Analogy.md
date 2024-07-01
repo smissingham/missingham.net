@@ -34,7 +34,7 @@ You quickly Google how to make a margherita, throw it together on the bench and 
 
 What's better, you can print that recipe and stick it on the wall/menu for next time!
 
-# When to use which
+# When to use which 🤷‍♀️
 
 The trade off in our example is that it's slower to construct each pizza individually (composition) as opposed to having them ready made (inheritance).
 

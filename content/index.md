@@ -34,7 +34,10 @@ Things I've either been reading up on, or intend to write an article about in fu
 
 ## Pricing & Revenue Management
 
-- Price Elasticity of Demand
-- Demand Modelling
-- Modelling Win Rates in Bid/Quote Competitive Environment
-- Modelling Return on Promotional Spend & Impact Simulation
+- Basic Principles
+	- Price Elasticity of Demand
+	- Product Mix
+- AI Modelling
+	- Elasticity & Demand
+	- Win Rates in Bid/Quote Competitive Environment
+	- Modelling Return on Promotional Spend & Impact Simulation
