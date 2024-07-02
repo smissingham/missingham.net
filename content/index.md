@@ -23,10 +23,20 @@ Things I've either been reading up on, or intend to write an article about in fu
 - [Polars](https://docs.pola.rs/)
 - Using [Ollama](https://ollama.com/library) + [continue.dev](https://www.continue.dev/) open source tools for free AI code-completion
 - [[Synthetic Sales Data]]
-- SQL vs noSQL, 10 years later
-- XGBoost Regression & Classification Simple Examples
 - Basic Python Modelling Pipelines
 - DataFrame Cheat Sheets
+- [Positron IDE](https://github.com/posit-dev/positron )
+- Database, Data Warehouse, Data Lake & Data Lakehoues
+
+## AI/ML Modelling Examples
+
+I want to make an essentials cheat sheet, containing basic implementation examples of most common AI/ML models, applied as simply as possible to use cases as easily comprehensible as possible
+
+- XGBoost Regression & Classification Simple Examples
+- Neural Networks
+	- ANN
+	- RNN
+	- CNN
 
 ## Finance
 
@@ -43,3 +53,11 @@ Things I've either been reading up on, or intend to write an article about in fu
 	- Win Rates in Bid/Quote Competitive Environment
 	- Modelling Return on Promotional Spend & Impact Simulation
 	- RNN for Time Series Modelling
+	- Cross Portfolio Cannibalisation
+	- Market Pressure Elasticity Impact
+
+## Self Education Resources
+*Note, I haven't checked the quality of these yet, they're bookmarks to check out for review. I'm not yet an advocate for the contents therein*
+
+https://www.youtube.com/watch?v=wPxDibqdg_w
+https://www.youtube.com/watch?v=tRku0RgRQtc
