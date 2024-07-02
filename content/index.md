@@ -38,6 +38,8 @@ Things I've either been reading up on, or intend to write an article about in fu
 	- Price Elasticity of Demand
 	- Product Mix
 - AI Modelling
+    - Customer Segmentation
 	- Elasticity & Demand
 	- Win Rates in Bid/Quote Competitive Environment
 	- Modelling Return on Promotional Spend & Impact Simulation
+	- RNN for Time Series Modelling

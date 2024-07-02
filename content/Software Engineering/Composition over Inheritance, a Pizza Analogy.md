@@ -41,3 +41,8 @@ The trade off in our example is that it's slower to construct each pizza individ
 But, how often do you get asked for variation from the menu? 
 
 If you're like a pizza shop, where "no olives" and "extra cheese" is common, you want composition. An opt-in process, where you have lower level *ingredients* ready to go, not an entire premade pizza that you have to deconstruct and will forever taste like remnant ingredients.
+
+A final thought, it is reasonable (and likely) that the best solution is somewhere in between, a combination of the two. Our pizzas dough could be pre-spun into the right size bases and pre-sauced, and then have ingredients thrown on top. This would arguably be composition on top of inheritance.
+The risk with this way of thinking is that the inherited base can quickly become bloated with unnecessary artifacts, so I find it best to still consider the argument at the high level, say it with me:
+
+>[!quote] Composition Over Inheritance
