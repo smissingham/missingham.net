@@ -55,6 +55,11 @@ export const defaultContentPageLayout: PageLayout = {
       useSavedState: true,
       filterFn: (node) => !node.name.startsWith("_")
     })),
+    Component.RecentNotes({
+      title: "Recent Updates",
+      limit: 5,
+      showTags: false
+    }),
   ],
 }
 
