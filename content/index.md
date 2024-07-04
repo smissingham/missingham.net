@@ -32,6 +32,7 @@ Things I've either been reading up on, or intend to write an article about in fu
 
 I want to make an essentials cheat sheet, containing basic implementation examples of most common AI/ML models, applied as simply as possible to use cases as easily comprehensible as possible
 
+- GAM & GLM
 - XGBoost Regression & Classification Simple Examples
 - Neural Networks
 	- ANN
@@ -61,3 +62,4 @@ I want to make an essentials cheat sheet, containing basic implementation exampl
 
 https://www.youtube.com/watch?v=wPxDibqdg_w
 https://www.youtube.com/watch?v=tRku0RgRQtc
+https://youtu.be/FXtHi_IbJdQ?si=Vi8jHPq75NbKvNzB
