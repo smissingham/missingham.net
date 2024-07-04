@@ -48,11 +48,12 @@ I want to make an essentials cheat sheet, containing basic implementation exampl
 ## Finance
 
 - Valuing Stock Options as a SaaS employee
+- Basics of Valuing a Business
 
 ## Pricing & Revenue Management
 
 - Basic Principles
-	- Price Elasticity of Demand
+	- [[Price Elasticity of Demand]]
 	- Product Mix
 - AI Modelling
     - Customer Segmentation
