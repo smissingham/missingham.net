@@ -45,7 +45,7 @@ They're also a great example case for promotional & kit/bundle modelling where a
 So, if you're reading this in its current state and wandering where the rest is, I'm busy scraping together a database of auto parts that doesn't infringe on private intellectual property domains 😅
 
 >[!note] No Real Life Proprietary Data
-> Though I will use globally known product brands as theoretical competitive offerings, but I **WILL NOT** be using any real company as my pretend business in any of these examples.
+> Though I will use globally known product brands as theoretical competitive offerings, I **WILL NOT** be using any real company as my pretend business in any of these examples.
 >
 >I've worked with many Fortune 500's on such software & modelling. I would never breach their trust, nor any NDA's. I value my job and my reputation.
 

@@ -1,16 +1,22 @@
 ---
 title: Welcome
+tags:
+  - big-data
+  - coding
+  - datascience
+  - patterns
+  - productivity
+  - publishing
+  - software-development
 ---
 
 G'day, welcome to my *[Digital Garden](https://quartz.jzhao.xyz/philosophy)*, where I keep my notes on thoughts, experiments, and how-to's.
 
-I love to build & experiment with new technologies, applying my passion for software wherever I can.
-
-My professional experience revolves primarily around revenue management,  so you'll find my notes to be a mix of revenue related software engineering & data analysis topics. 
+I'm a senior software engineer and a pricing & revenue management analyst.
 
 Got an idea for a subject I should investigate? Reach out on [LinkedIn](https://www.linkedin.com/in/sean-missingham/) or [Email Me](mailto:sean@missingham.net)
 
-Looking for content? Take a look in the explorer (side or bottom), or search a keyword in the search box.
+Looking for content? Take a look in the explorer (side or bottom), search a keyword in the search box, or check out my list of current interests below.
 
 # Topics of Recent Interest:
 
@@ -58,8 +64,14 @@ I want to make an essentials cheat sheet, containing basic implementation exampl
 	- Market Pressure Elasticity Impact
 
 ## Self Education Resources
-*Note, I haven't checked the quality of these yet, they're bookmarks to check out for review. I'm not yet an advocate for the contents therein*
+*Note, I haven't checked the quality of these yet, they're bookmarks to check out for review. 
+I'm not yet an advocate for the contents therein*
 
-https://www.youtube.com/watch?v=wPxDibqdg_w
-https://www.youtube.com/watch?v=tRku0RgRQtc
-https://youtu.be/FXtHi_IbJdQ?si=Vi8jHPq75NbKvNzB
+- Readlist
+	- [The Inmates Are Running the Asylum](https://www.amazon.com.au/Inmates-Are-Running-Asylum-Products-ebook/dp/B000OZ0N62/ref=sr_1_2?crid=1YVXUK71B4KDJ&dib=eyJ2IjoiMSJ9.CBtOQcHfG2mlTWRpOCijys1L3stPj4riGdTqBZvxft8eJt8Abfb8Or50WW4ajOUnezTEBPcomxG_JVGLK7WwmPA5-2K08r7X9AhBNPcox1GqlaA85vOu8Dn_LVRVKOdmxmRWCqEnaEcEXh1ZH_JlWg.iId5ME8ePC1KQDAaDlOUcvVEgxwuhZV_yTbQLdvtDDQ&dib_tag=se&keywords=inmates+running+the+asylum&qid=1720062211&s=digital-text&sprefix=inmates+running+the+asylu%2Cdigital-text%2C284&sr=1-2)
+	- [Nearbound and the Rise of the Who Economy - Jared Fuller](https://www.amazon.com.au/Nearbound-Rise-Economy-Jared-Fuller-ebook/dp/B0CW2WPBS6)
+	
+- Watchlist
+	- [Price Optimization: From Exploration to Productionising - David Adey, PhD & Alexey Drozdetskiy, PhD](https://www.youtube.com/watch?v=wPxDibqdg_w)
+	- [Price Elasticity and Optimization in Python (feat. pyGAM) - Business Science](https://www.youtube.com/watch?v=tRku0RgRQtc)
+	- [Price Elasticity and Optimization with Machine Learning in R (feat. XGBoost) - Busines Science](https://youtu.be/FXtHi_IbJdQ?si=Vi8jHPq75NbKvNzB)
