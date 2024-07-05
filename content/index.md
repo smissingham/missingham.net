@@ -12,7 +12,7 @@ tags:
 
 G'day, welcome to my *[Digital Garden](https://quartz.jzhao.xyz/philosophy)*, where I keep my notes on thoughts, experiments, and how-to's.
 
-I'm a senior software engineer and a pricing & revenue management analyst.
+I'm a software & dev-ops engineer, and a pricing & revenue management analyst.
 
 Got an idea for a subject I should investigate? Reach out on [LinkedIn](https://www.linkedin.com/in/sean-missingham/) or [Email Me](mailto:sean@missingham.net)
 
