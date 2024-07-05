@@ -19,7 +19,7 @@ Similar to price elasticity of demand, but represents the change in quantity of 
 Expressed as
 
 $$
-E_{xy} = \frac{ΔQx} {ΔPy} * \frac{Py} {Qx}
+E_{xy} = \frac{ΔQx} {ΔPy} \times \frac{Py} {Qx}
 $$
 [Investopedia Reference](https://www.investopedia.com/terms/c/cross-elasticity-demand.asp )
 
