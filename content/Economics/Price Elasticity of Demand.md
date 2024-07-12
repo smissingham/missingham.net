@@ -5,7 +5,7 @@ tags:
 ---
 ## Price Elasticity of Demand
 
-A coefficient that represents the relationship between a chance in price and any consequential change in demand. 
+A coefficient that represents the relationship between a change in price and any consequential change in demand. 
 
 Expressed as:
 $$
