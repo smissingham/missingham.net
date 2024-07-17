@@ -42,7 +42,7 @@ graph LR
 Currently, I'm thinking of using auto parts, because those products & brands are usually globally recognisable, and they're needed in expensive commercial contexts just as much as home-hobbyist so they're familiar to most people. 
 They're also a great example case for promotional & kit/bundle modelling where a retailer might offer lubricant deals in conjunction purchase with discrete parts.
 
-So, if you're reading this in its current state and wandering where the rest is, I'm busy scraping together a database of auto parts that doesn't infringe on private intellectual property domains 😅
+So, if you're reading this in its current state and wondering where the rest is, I'm busy scraping together a database of auto parts that doesn't infringe on private intellectual property domains 😅
 
 >[!note] No Real Life Proprietary Data
 > Though I will use globally known product brands as theoretical competitive offerings, I **WILL NOT** be using any real company as my pretend business in any of these examples.
