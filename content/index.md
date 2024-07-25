@@ -33,6 +33,7 @@ Things I've either been reading up on, or intend to write an article about in fu
 - DataFrame Cheat Sheets
 - [Positron IDE](https://github.com/posit-dev/positron )
 - Database, Data Warehouse, Data Lake & Data Lakehoues
+- Time series forecasting with LLM's vs traditional meth
 
 ## AI/ML Modelling Examples
 
