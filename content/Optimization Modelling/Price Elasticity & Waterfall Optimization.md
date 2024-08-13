@@ -5,23 +5,27 @@ Note, some tables and columns herein are marked as required/recommended/bonus. D
 ## Customers - Required
 One row per Customer ID, brings additional customer hierarchy context
 
-Columns:
+Required Columns:
 - Customer ID (must match/join to transactions table)
 - Customer Name
-- Customer Hierarchy (usually there are multiple columns that explain a customer's hierarchy)
+- Customer Hierarchy (and/or any customer attributes that link to price, discount etc.)
 	- Eg: 
 		- Customer Segment
 		- Customer Class
 		- Customer Category
 		- etc.
 
+Recommended Extras:
+- Bill-to Customer ID (the customer buying/paying for the product, if different from the receiver)
+- Ship-to Customer ID (the customer address that is receiving the goods, if different from Bill-To)
+
 ## Products - Required
 One row per Product ID, brings additional product hierarchy context
 
-Columns:
+Required Columns:
 - Product ID (must match/join to transactions table)
 - Product Name
-- Product Hierarchy (usually there are multiple columns that explain a product's hierarchy)
+- Product Hierarchy (and/or any product attributes that link to price, discount etc.)
 	- Eg: 
 		- Product Segment
 		- Product Class
@@ -31,8 +35,9 @@ Columns:
 ## Transactions (Sales Line-Items) - Required
 The fundamental data table required for modelling optimization of price, margin, discount etc.
 
-Mandatory Columns:
-- Invoice Line ID (a unique identifier per transaction line, could be InvoiceNumber + LineNumber)
+Required Columns:
+- Invoice ID (the unique identifier of an invoice)
+- Invoice Line ID (the line number on the corresponding invoice)
 - Customer ID (should match/join to "Customers" table)
 - Product ID (should match/join to "Products" table)
 - Invoice Date
@@ -43,6 +48,7 @@ Mandatory Columns:
 Recommended Extras:
 - Product List Price at time of invoice (can be derived from list prices table if provided)
 - Customer Standard Discount (can be derived from another table if provided)
+- Quote ID / Quote Line ID (if quotes are provided, this will join quotes table to transactions)
 
 ## List Prices History - Recommended
 A table containing historic list price points that can be joined to transactions in order to derive discount given at time of invoice.
@@ -65,7 +71,8 @@ Columns:
 A table of quote line-items, that can be joined to transactions to derive the quoted vs. ordered price and qty for sales where a quote was generated. 
 
 Columns:
-- Quote Line ID
+- Quote ID (the unique identifier of an quote)
+- Quote Line ID (the line number on the corresponding quote)
 - Invoice Line ID (must match/join to transactions)
 - Quoted Quantity
 - Quoted Price
