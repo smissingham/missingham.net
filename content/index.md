@@ -33,7 +33,7 @@ Things I've either been reading up on, or intend to write an article about in fu
 - DataFrame Cheat Sheets
 - [Positron IDE](https://github.com/posit-dev/positron )
 - Database, Data Warehouse, Data Lake & Data Lakehoues
-- Time series forecasting with LLM's vs traditional meth
+- Time series forecasting with LLM's vs traditional methods
 
 ## AI/ML Modelling Examples
 
@@ -57,8 +57,9 @@ I want to make an essentials cheat sheet, containing basic implementation exampl
 	- [[Price Elasticity of Demand]]
 	- Product Mix
 - AI Modelling
-    - Customer Segmentation
-	- Elasticity & Demand
+	- Feature Importance (how well can different attributes of data can predict others)
+	- Customer Segmentation
+	- Elasticity & Demand modelling
 	- Win Rates in Bid/Quote Competitive Environment
 	- Modelling Return on Promotional Spend & Impact Simulation
 	- RNN for Time Series Modelling
