@@ -1,7 +1,8 @@
 
-# Data Prerequisites
+Below is are outlines for the data structures commonly required for price optimization.
 
-Note, some tables and columns herein are marked as required/recommended/bonus. Despite this, the more data that is provided, the more meaning can be derived from the data and the better potential optimization results can be achieved.
+Note, some tables and columns herein are marked as required/recommended/bonus.
+Despite this, the more data that is provided, the more meaning can be derived from the data and the better potential optimization results can be achieved.
 ## Customers - Required
 One row per Customer ID, brings additional customer hierarchy context
 
