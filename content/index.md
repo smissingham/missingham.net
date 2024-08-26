@@ -55,6 +55,7 @@ I want to make an essentials cheat sheet, containing basic implementation exampl
 
 - Basic Principles
 	- [[Price Elasticity of Demand]]
+	- Price Realisation
 	- Product Mix
 - AI Modelling
 	- Feature Importance (how well can different attributes of data can predict others)
