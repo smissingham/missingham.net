@@ -7,8 +7,11 @@ tags:
 ---
 > [!warning] This page is a work in progress
 
-- Bind mount performance
-- Must run docker commands from within wsl shell
+
+Prerequisites:
+- Port forward 80 & 443
+- Install docker compose
+- Run docker-compose network create public
 
 Samples
 ## .env
@@ -33,9 +36,9 @@ volumes:
   letsencrypt:
   
 networks:
-  traefik-public:
+  public:
     external: true
-    name: traefik-public
+    name: public
   internal:
     name: internal
 
@@ -49,7 +52,7 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
     networks:
-      - traefik-public
+      - public
     command:
       #- "--log.level=DEBUG"
       #- "--api.dashboard=true"
