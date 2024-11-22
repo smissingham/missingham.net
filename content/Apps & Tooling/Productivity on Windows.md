@@ -7,14 +7,12 @@ tags:
   - windows
   - tooling
 ---
-After over a decade as a professional software developer, I still use Windows as my primary operating system. Despite trying many Linux distros, and even an Apple 🫢 Macbook, I consistently return to Windows as my daily driver.
-
-Quick caveat, I love Linux (specifically Ubuntu), just not for a daily work station. 
+After over a decade as a professional software developer, [[My Desktop Operating System | until very recently]] I was using Windows as my primary operating system. Despite trying many Linux distros, and even an Apple 🫢 Macbook, I consistently returned to Windows as my daily driver.
 
 > [!note] This isn't another debate on what's best, but a list of the things that I use to make Windows excellent for productivity
 
 I'll keep the *why* short, there's enough posts out there debating such. 
-For me, it comes down to first class support for most software, primarily
+For me, it came down to first class support for most software, primarily
 - Microsoft Office
 - Video Games
 

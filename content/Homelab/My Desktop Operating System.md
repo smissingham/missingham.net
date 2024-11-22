@@ -2,7 +2,7 @@ I've been a computer power-user for decades now, I've used so many operating sys
 
 I've extensively used:
 - MacOS (yuck)
-- Windows Desktop Pro (95, 2000, Windows 7, 8, 10, 11 etc.) ***- my daily driver***
+- Windows Desktop Pro (95, 2000, Windows 7, 8, 10, 11 etc.) ***- my previous daily driver***
 - Windows Server (2008, 2010, 2012, 2016 etc.)
 - Ubuntu Desktop
 - Linux Mint
