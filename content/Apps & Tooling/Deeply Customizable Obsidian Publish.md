@@ -5,6 +5,10 @@ tags:
   - github
   - google-drive
 ---
+> [!update] Update Jan 2025
+> In recent times, I've moved away from Google services. The remainder of this article remains true, but instead of using Google Drive via Github workflows I use a cron job on my NixOS server.
+
+
 I've been a paying subscriber of Obsidian Sync for about a year at this point, so I can sync notes between my phone, laptop and pc.
 
 I test-drove Obsidian Publish, but it was sorely lacking what I wanted in a publishing utility. 
