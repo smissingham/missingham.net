@@ -20,23 +20,56 @@ These are the notes for my investigation of what that might come to look like.
 ## Nice to Have
 - Notebook support for visualisations
 ## Won't Have
-- Windows Remote Desktop 😭
+
 
 # Technology Notes
 
-### Linux Remote Desktop Options+
+### Linux Remote Desktop Options
+
 My top preference would be to have a remote desktop connection to my NixOS host. 
 Generally speaking, this looks to be challenging. NixOS + KDE Plasma6 + Wayland + Remote Desktop doesn't have a lot of resounding successful notes online. My notes below.
 
 NixOS Wiki Reference: https://nixos.wiki/wiki/Remote_Desktop
 #### Option 1: KRDP
+___
+> [!failure] No-go. Throws errors in authentication, couldn't remedy
 
 It appears there's a KDE Plasma native RDP service in nix packages: [kdePackages.krdp](https://search.nixos.org/packages?channel=24.11&type=packages&query=kdePackages.krdp)
-#### Option 2: XRDP
 
+After installation and setup, I try to connect from Windows but get an error
+> [!error] Because of a protocol error, this session will be disconnected.
+
+I see the following in system logs on the host machine
+![[Pasted image 20250103164125.png]]
+
+Digging through forums suggests there's a necessary dependency called `freerdp` to be installed. Tried installing both `freerdp` and `freerdp3` but no help there.
+More digging suggests it's an issue with the implementation of credential sharing within KRDP. Many people reporting same issue with no fix. 
+
+Next option...
+#### Option 2: [XRDP](https://nixos.wiki/wiki/Remote_Desktop#RDP)
+___
 Looks like it might be possible to get a plasma DE running via xRDP
 - [Discourse Example](https://discourse.nixos.org/t/how-to-configure-services-xrdp-defaultwindowmanager-for-remote-desktop/9575)
-- [Wiki Reference](https://nixos.wiki/wiki/Remote_Desktop#RDP)
+
+#### Option 3: [Sunshine + Moonlight](https://github.com/LizardByte/Sunshine)
+___
+> [!result] Not yet tried
+
+Looks very complex to set up and use, but is probably highly performant given that it's intended for game streaming
+#### Option 4: [Rustdesk](https://rustdesk.com/)
+___
+> [!failure] No-go. Seems like Wayland + KDE6 not supported
+
+Nixpkgs has two available packages
+- `rustdesk` - a gui, with all the needful features to run rustdesk remote
+- `rustdesk-server` - a relay server for ID relay, not to be confused with a headless backend 
+
+Rustdesk client throws error on connect:
+> [!bug] Login Error. Failed to create capturer.
+
+System logs show the following error, then a massive rust stack trace dump:
+![[Pasted image 20250103174037.png]]
+
 
 
 ### Nix Shell Environments

@@ -5,10 +5,10 @@ tags:
 ---
 # General
 
-| Alias | Command                    | Description                | Example                      |
-| ----- | -------------------------- | -------------------------- | ---------------------------- |
-| clip  | xclip -selection clipboard | Copy contents to clipboard | `echo "Hello World" \| clip` |
-|       |                            |                            |                              |
+| Alias | Command                      | Description                | Example                      |
+| ----- | ---------------------------- | -------------------------- | ---------------------------- |
+| clip  | `xclip -selection clipboard` | Copy contents to clipboard | `echo "Hello World" \| clip` |
+|       | `journalctl --follow`        | Monitor system logs        | `journalctl --follow`        |
 
 # NixOS Specific
 
