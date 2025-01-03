@@ -20,4 +20,4 @@ As I de-google my life, I'll note down here my thoughts on what I'm doing with w
 	- Bitwarden
 	- Proton Pass
 - 2FA
-	- Ente Auth
+	- Proton Pass
