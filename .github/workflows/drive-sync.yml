@@ -2,9 +2,9 @@ name: Google Drive Sync
 
 on:
   workflow_dispatch:
-  schedule:
+  #schedule:
     # 12 hourly
-    - cron: '0 */12 * * *'
+  #  - cron: '0 */12 * * *'
 
 permissions: 
   contents: write
