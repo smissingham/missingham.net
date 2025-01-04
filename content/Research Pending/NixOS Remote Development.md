@@ -61,6 +61,8 @@ ___
 #### Option 3: [Sunshine](https://github.com/LizardByte/Sunshine) + [Moonlight](https://github.com/moonlight-stream/moonlight-qt)
 > [!result] Not yet tried
 
+[Reddit Tutorial Thread](https://www.reddit.com/r/NixOS/comments/1bq2bx4/beginners_guide_to_sunshine_gamedesktop_streaming/)
+
 Looks very complex to set up and use, but is probably highly performant given that it's intended for game streaming
 ___
 #### Option 4: [Rustdesk](https://rustdesk.com/)
