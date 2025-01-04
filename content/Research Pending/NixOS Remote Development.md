@@ -30,8 +30,8 @@ My top preference would be to have a remote desktop connection to my NixOS host.
 Generally speaking, this looks to be challenging. NixOS + KDE Plasma6 + Wayland + Remote Desktop doesn't have a lot of resounding successful notes online. My notes below.
 
 NixOS Wiki Reference: https://nixos.wiki/wiki/Remote_Desktop
-#### Option 1: KRDP
 ___
+#### Option 1: KRDP
 > [!failure] No-go. Throws errors in authentication, couldn't remedy
 
 It appears there's a KDE Plasma native RDP service in nix packages: [kdePackages.krdp](https://search.nixos.org/packages?channel=24.11&type=packages&query=kdePackages.krdp)
@@ -46,18 +46,24 @@ Digging through forums suggests there's a necessary dependency called `freerdp` 
 More digging suggests it's an issue with the implementation of credential sharing within KRDP. Many people reporting same issue with no fix. 
 
 Next option...
-#### Option 2: [XRDP](https://nixos.wiki/wiki/Remote_Desktop#RDP)
+
 ___
+#### Option 2: [XRDP](https://nixos.wiki/wiki/Remote_Desktop#RDP)
+> [!warning] No go. Can't even finish nix-rebuild with it enabled
+
 Looks like it might be possible to get a plasma DE running via xRDP
 - [Discourse Example](https://discourse.nixos.org/t/how-to-configure-services-xrdp-defaultwindowmanager-for-remote-desktop/9575)
 
-#### Option 3: [Sunshine + Moonlight](https://github.com/LizardByte/Sunshine)
+Even if I got this working, it would be using the X windowing system, not Wayland which would leave me unable to hot load the live user environment, which is my goal. 
+I may come back to this option, but for now, trying the next thing.
+
 ___
+#### Option 3: [Sunshine](https://github.com/LizardByte/Sunshine) + [Moonlight](https://github.com/moonlight-stream/moonlight-qt)
 > [!result] Not yet tried
 
 Looks very complex to set up and use, but is probably highly performant given that it's intended for game streaming
-#### Option 4: [Rustdesk](https://rustdesk.com/)
 ___
+#### Option 4: [Rustdesk](https://rustdesk.com/)
 > [!failure] No-go. Seems like Wayland + KDE6 not supported
 
 Nixpkgs has two available packages
@@ -69,7 +75,7 @@ Rustdesk client throws error on connect:
 
 System logs show the following error, then a massive rust stack trace dump:
 ![[Pasted image 20250103174037.png]]
-
+___
 
 
 ### Nix Shell Environments
