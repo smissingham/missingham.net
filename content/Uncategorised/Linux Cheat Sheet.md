@@ -2,6 +2,7 @@
 tags:
   - cli
   - linux
+  - nixos
 ---
 # General
 
