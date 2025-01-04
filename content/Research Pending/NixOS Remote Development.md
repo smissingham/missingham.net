@@ -82,6 +82,8 @@ ___
 
 ### VS Code Dev Containers
 
+### VS Code Remote Development
+https://code.visualstudio.com/docs/remote/ssh
 ## Fallback: Windows VM with RDP
 
 If all else fails, I can at least for time's sake set up a Windows VM and enable RDP to that.
