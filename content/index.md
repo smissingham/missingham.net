@@ -1,5 +1,5 @@
 ---
-title: Welcome
+title: Sean Missingham's Digital Garden
 tags:
   - big-data
   - coding
@@ -10,14 +10,12 @@ tags:
   - software-development
   - linux
 created: 2024-12-28T11:00
-updated: 2025-01-03T12:51
+updated: 2025-03-12T13:27
 ---
-G'day, welcome to my *[Digital Garden](https://quartz.jzhao.xyz/philosophy)*, where I keep my notes on thoughts, experiments, and how-to's.
+G'day, welcome to my *[Digital Garden](https://quartz.jzhao.xyz/philosophy)*, where I keep my public notes on thoughts, experiments, and how-to's.
 
-I'm a software & devops engineer, and a revenue management analyst.
+I'm a software generalist. I've been a polyglot programmer & analyst for 10+ years, always somewhere close to the revenue management & logistics industries.
 
-Looking for content? Take a look in the explorer (side or bottom), search a keyword in the search box, or check out my list of current interests below.
+Looking for content? Take a look in the explorer (side or bottom), search a keyword in the search box, or check out my [[Brain Backlog]] note where I log my to-research items.
 
-Interested in my current activities? Check out my [[Brain Backlog]]
-
-Got an idea for a subject I should investigate? Reach out on [LinkedIn](https://www.linkedin.com/in/sean-missingham/) or [Email Me](mailto:sean@missingham.com)
+Got an idea for a subject I should investigate? Reach out thought the social links in the website footer.
