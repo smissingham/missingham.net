@@ -8,11 +8,21 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/smissingham",
+      LinkedIn: "https://www.linkedin.com/in/sean-missingham/",
+      Email: "mailto:sean+web@missingham.com",
     },
   }),
 }
+
+const explorer = Component.Explorer({
+  title: "Explore",
+  useSavedState: true,
+  filterFn: (node) => !node.displayName.startsWith("_"),
+  mapFn: (node) => {
+    return (node.displayName = node.displayName.replace(/-/g, " "))
+  },
+})
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
@@ -34,7 +44,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    explorer,
   ],
   right: [
     Component.Graph(),
@@ -58,7 +68,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    explorer,
   ],
   right: [],
 }

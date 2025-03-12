@@ -1,0 +1,64 @@
+name: Private Git Repo Sync
+
+on:
+  schedule: # Note, selected branch is based on github repo default branch
+    - cron: "0 */6 * * *" # 6-hourly
+  workflow_dispatch: # enables manual trigger
+
+permissions:
+  contents: write
+
+env:
+  CONTENT_DIR: "./content"
+  PRIVATE_REPO_CLONE_DIR: "./private-repo-clone"
+  PRIVATE_REPO_CONTENT_DIR: "./@Public"
+
+jobs:
+  download_and_sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Print Directory Contents
+        run: ls -al
+
+      - name: Delete Existing Content
+        run: |
+          rm -rf ${{ env.CONTENT_DIR }}   
+          mkdir -p ${{ env.CONTENT_DIR }}
+
+      - name: Download files from Private Git Repo
+        run: |
+          # Shallow clone to minimize download with authentication
+          git clone --depth 1 https://${{ secrets.GHUB_PERSONAL_ACCESS_TOKEN }}@github.com/${{ secrets.PRIVATE_GITHUB_REPO }}.git ${{ env.PRIVATE_REPO_CLONE_DIR }}
+
+          # Copy only the directory you want
+          cp -r ${{ env.PRIVATE_REPO_CLONE_DIR }}/${{ env.PRIVATE_REPO_CONTENT_DIR }}/* ${{ env.CONTENT_DIR }}/
+
+          # Remove the cloned repo
+          rm -rf ${{ env.PRIVATE_REPO_CLONE_DIR }}
+
+      - name: Commit Diff
+        run: |
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git config user.name "${{ github.actor }}"
+          git add .
+          git commit -m "Drive sync: $(date +'%B %d, %Y %H:%M %p')" || echo "No changes to commit."
+
+      - name: Push Commit
+        run: |
+          git push origin ${{ github.head_ref || github.ref }} || echo "No changes to push."
+
+      - name: Trigger Deploy Workflow if Changes Were Pushed
+        env:
+          DEPLOY_FILE: "github-pages-publish.yaml"
+        run: |
+          if [ -n "$(git diff --name-only HEAD^ HEAD)" ]; then
+            echo "Changes detected. Triggering deploy workflow."
+            export BRANCH_NAME=$(echo ${{ github.head_ref || github.ref }} | awk -F'/' '{print $NF}')
+            curl -X POST -H "Authorization: Bearer ${{ secrets.GHUB_PERSONAL_ACCESS_TOKEN }}" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${{ github.repository }}/actions/workflows/${{ env.DEPLOY_FILE }}/dispatches -d "{\"ref\":\"$BRANCH_NAME\"}"
+          else
+            echo "No changes detected. Skipping deploy workflow."
+          fi
