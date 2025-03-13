@@ -35,9 +35,9 @@ const config: QuartzConfig = {
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
           dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          secondary: "rgba(250, 150, 80, 0.75)", // page title, menu sections, breadcrumbs
+          tertiary: "rgba(250, 150, 80, 1)", // link hover/active
+          highlight: "rgba(250, 150, 80, 0.15)", // tag/link shading
           textHighlight: "#fff23688",
         },
         darkMode: {
@@ -45,10 +45,10 @@ const config: QuartzConfig = {
           lightgray: "#393639",
           gray: "#646464",
           darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          dark: "rgba(200, 200, 200, 0.75)", // inline headings
+          secondary: "rgba(250, 150, 80, 0.75)", // page title, menu sections, breadcrumbs
+          tertiary: "rgba(250, 150, 80, 1)", // link hover/active
+          highlight: "rgba(250, 150, 80, 0.15)", // tag/link shading
           textHighlight: "#b3aa0288",
         },
       },
