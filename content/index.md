@@ -10,7 +10,7 @@ tags:
   - software-development
   - linux
 created: 2024-12-28T11:00
-updated: 2025-03-12T13:27
+updated: 2025-03-13T11:57
 ---
 G'day, welcome to my *[Digital Garden](https://quartz.jzhao.xyz/philosophy)*, where I keep my public notes on thoughts, experiments, and how-to's.
 
