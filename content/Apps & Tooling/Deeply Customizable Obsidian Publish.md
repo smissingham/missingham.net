@@ -5,10 +5,11 @@ tags:
   - github
   - google-drive
 created: 2024-12-28T11:04
-updated: 2025-01-03T13:12
+updated: 2025-04-05T08:02
 ---
 > [!update] Update Jan 2025
-> In recent times, I've moved away from Google services. The remainder of this article remains true, but instead of using Google Drive via Github workflows I use a cron job on my NixOS server.
+> In recent times, I've moved away from Google services. The remainder of this article remains true, but instead of using Google Drive via Github workflows I use Obsidian Sync, and a private git repo for vault backups.
+> My publishing pipeline fetches from repo backups instead of Google Drive now
 
 
 I've been a paying subscriber of Obsidian Sync for about a year at this point, so I can sync notes between my phone, laptop and pc.
