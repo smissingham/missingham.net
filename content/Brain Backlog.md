@@ -2,7 +2,7 @@
 tags:
   - backlog
 created: 2025-01-03T12:36
-updated: 2025-04-02T18:39
+updated: 2025-04-07T16:27
 ---
 Where I list things that I want/intend to read, watch, research or otherwise consume 
 ___
@@ -44,6 +44,7 @@ ___
 - Basically, things I want to post here in my public notes
 - Why Obsidian over Notion, OneNote, Evernote etc.
 - inconvenient truth about Elasticity 
+- The difference between architecture and strategy
 ## General Interest
 - [ ] DataFrame cheat sheets
 - [ ] [[Agile Software Development, a Rock Climbing Analogy]]
