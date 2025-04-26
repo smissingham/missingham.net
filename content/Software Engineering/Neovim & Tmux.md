@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-04-25T12:28
+updated: 2025-04-25T15:59
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -17,7 +17,6 @@ References:
 | `\q`       | Quit        | `:q`    |                                                     |
 | `\re`      | Reset       | `:e!`   | Resets current buffer (Abandon active file changes) |
 |            |             |         |                                                     |
-
 ### File / Folder Nav
 | My Binding | My Verbiage      | Default                  | Description                        |
 | ---------- | ---------------- | ------------------------ | ---------------------------------- |
@@ -27,7 +26,6 @@ References:
 | `\ft`      | File-Tree        | `:Neotree`               | Neotree Pane Directory Browser     |
 | `\ftt`     | File-Tree-Toggle | `:Neotree toggle`        | Neotree Pane Toggle On/Off         |
 |            |                  |                          |                                    |
-
 ### Window / Pane Nav
 `TBD` - Scroll Viewport, Center Viewport on cursor
 ## File Changes
