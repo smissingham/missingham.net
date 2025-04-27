@@ -1,7 +1,9 @@
 ---
 created: 2025-01-20T19:23
-updated: 2025-02-18T13:58
+updated: 2025-04-27T09:43
 ---
+https://macos-defaults.com/
+
 Print a list of default settings from current device (configurable with Nix Darwin via system.defaults.CustomUserPreferences)
 ```defaults read```
 

@@ -3,7 +3,7 @@ tags:
   - software-development
   - patterns
 created: 2024-07-01T15:54
-updated: 2025-04-23T10:00
+updated: 2025-04-23T10:30
 ---
 
 You'll hear many programmers debate this subject, I land squarely in favour of Composition over Inheritance 99% of the time. But, unless you've had a lot of experience programming enterprise systems, the explanations out there are hard to grasp.
