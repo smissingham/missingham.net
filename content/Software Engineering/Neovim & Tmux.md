@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-04-25T15:59
+updated: 2025-04-26T13:42
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -28,6 +28,7 @@ References:
 |            |                  |                          |                                    |
 ### Window / Pane Nav
 `TBD` - Scroll Viewport, Center Viewport on cursor
+
 ## File Changes
 `:e!` - Abandon unsaved changes to open file
 # Tmux
