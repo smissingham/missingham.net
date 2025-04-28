@@ -1,6 +1,6 @@
 ---
 created: 2024-11-21T14:36
-updated: 2024-11-21T14:36
+updated: 2025-04-27T20:57
 ---
 I've been a computer power-user for decades now, I've used so many operating systems at a depth more than most.
 
@@ -25,7 +25,4 @@ Better yet, I'd love to have that desktop configuration declared in a configurat
 
 As it turns out, there is a hot project for exactly this. It brings the *Infrastructure-as-Code* approach from cloud engineering and applies it to a Linux Desktop environment.
 
-I've been using it since August 2024, and it's awesome. It's called 
-# [[NixOS]]
-
-## [Here is my config](https://github.com/smissingham-nixos-config)
+I've been using it since August 2024, and it's awesome. It's called [[NixOS]]

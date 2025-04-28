@@ -1,6 +1,6 @@
 ---
 created: 2024-11-21T15:32
-updated: 2024-11-21T15:32
+updated: 2025-04-27T20:57
 ---
 https://nixos.org/
 
@@ -16,8 +16,7 @@ Instead, `nix` allows you to install software either via a declarative configura
 
 This is my daily driver operating system configuration: 
 
-https://github.com/smissingham/nixos-config
-
+https://github.com/smissingham/nix
 ## General Notes on My Config
 
 ### I use KDE Plasma 6 for my Desktop Environment
