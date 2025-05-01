@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-04-30T12:45
+updated: 2025-04-30T21:35
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -75,3 +75,9 @@ References:
 |            | `Ctrl+B Ctrl+↑↓←→` | Resize           |
 |            |                    |                  |
 |            |                    |                  |
+
+## Todo
+- Lazygit
+- Avante/Copilot
+- Noice 
+- 
