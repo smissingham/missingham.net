@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-04-26T13:42
+updated: 2025-04-30T12:45
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -28,6 +28,8 @@ References:
 |            |                  |                          |                                    |
 ### Window / Pane Nav
 `TBD` - Scroll Viewport, Center Viewport on cursor
+
+- Switch focus between window splits `Ctrl-W + HJKL`
 
 ## File Changes
 `:e!` - Abandon unsaved changes to open file
