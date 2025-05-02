@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-04-30T21:35
+updated: 2025-05-02T08:36
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -10,26 +10,35 @@ References:
 - https://nix-community.github.io/nixvim/
 - https://dotfyle.com/neovim/plugins/trending
 ## Navigation
+[Which-Key](https://github.com/folke/which-key) plugin shows available shortcuts after leader key press. Common entry points below:
+
+`\` - Leader key, access all shortcuts from here
+`\f` - File / Find
+`\s` - Search
+`\g` - Git
 ### General Operations
-| My Binding | My Verbiage | Default | Description                                         |
-| ---------- | ----------- | ------- | --------------------------------------------------- |
-| `\s`       | Save        | `:w`    |                                                     |
-| `\q`       | Quit        | `:q`    |                                                     |
-| `\re`      | Reset       | `:e!`   | Resets current buffer (Abandon active file changes) |
-|            |             |         |                                                     |
+| My Binding | My Verbiage | Default | Mode | Description                                         |
+| ---------- | ----------- | ------- | ---- | --------------------------------------------------- |
+|            | Save        | `:w`    | C    |                                                     |
+|            | Quit        | `:q`    | C    |                                                     |
+|            | Reset       | `:e!`   | C    | Resets current buffer (Abandon active file changes) |
+|            | Copy        | `y`     | V    | "Yank" (copy selected region)                       |
+|            | Cut         | `d`     | V    | "Delete" (cut selected region)                      |
+|            | Paste       | `p`     | V    | "Paste" (paste yanked/deleted at cursor)            |
 ### File / Folder Nav
-| My Binding | My Verbiage      | Default                  | Description                        |
-| ---------- | ---------------- | ------------------------ | ---------------------------------- |
-| `\ff`      | Find-Files       | `:Telescope find_files`  | Telescope Browse Files             |
-| `\fg`      | Find-Grep        | `:Telescope live_grep`   | Telescope Browse Files by Contents |
-| `\fd`      | Find-Dir         | `:Telescope file_browse` | Telescope Browse Directories       |
-| `\ft`      | File-Tree        | `:Neotree`               | Neotree Pane Directory Browser     |
-| `\ftt`     | File-Tree-Toggle | `:Neotree toggle`        | Neotree Pane Toggle On/Off         |
-|            |                  |                          |                                    |
+| My Binding | My Verbiage    | Default | Description                        |
+| ---------- | -------------- | ------- | ---------------------------------- |
+| `\ff`      | Find-Files     |         | Find Files (Fuzzy)                 |
+| `\fg`      | Find-Git Files |         | Find Git Files                     |
+| `\fp`      | Find-Projects  |         | Find Projects                      |
+| `\e`       | Explorer       |         | File Directory Browser             |
+| `\sg`      | Search w/ Grep |         | Find inside files with Grep search |
 ### Window / Pane Nav
-`TBD` - Scroll Viewport, Center Viewport on cursor
+`z z` - Center viewport on current line
 
 - Switch focus between window splits `Ctrl-W + HJKL`
+#### Tmux-Vim-Navigator
+Switch seamlessly between neovim/tmux panes with: `Ctrl + HJKL`
 
 ## File Changes
 `:e!` - Abandon unsaved changes to open file
@@ -77,7 +86,6 @@ References:
 |            |                    |                  |
 
 ## Todo
-- Lazygit
-- Avante/Copilot
-- Noice 
+- treesitter tj
+- blinkcmp mrjakob/tj
 - 
