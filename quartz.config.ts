@@ -29,26 +29,28 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "rgba(250, 150, 80, 0.75)", // page title, menu sections, breadcrumbs
-          tertiary: "rgba(250, 150, 80, 1)", // link hover/active
-          highlight: "rgba(250, 150, 80, 0.15)", // tag/link shading
-          textHighlight: "#fff23688",
+          // Catppuccin Latte
+          light: "#EFF1F5",      // Base
+          lightgray: "#4C4F69",  // Text
+          gray: "#5C5F77",       // Subtext1
+          darkgray: "#ACB0BE",   // Surface2
+          dark: "#1E1E2E",       // Crust
+          secondary: "#FE640B",  // Peach - for page title, menu sections, breadcrumbs
+          tertiary: "#DC8A78",   // Rosewater - for link hover/active
+          highlight: "rgba(254, 100, 11, 0.15)", // Peach with opacity - for tag/link shading
+          textHighlight: "#DF8E1D88", // Yellow with opacity
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "rgba(200, 200, 200, 0.75)", // inline headings
-          secondary: "rgba(250, 150, 80, 0.75)", // page title, menu sections, breadcrumbs
-          tertiary: "rgba(250, 150, 80, 1)", // link hover/active
-          highlight: "rgba(250, 150, 80, 0.15)", // tag/link shading
-          textHighlight: "#b3aa0288",
+          // Catppuccin Mocha
+          light: "#181825",      // Base
+          lightgray: "#313244",  // Overlay
+          gray: "#6C7086",       // Surface2
+          darkgray: "#BAC2DE",   // Subtext
+          dark: "#CDD6F4",       // Text
+          secondary: "#fab387",  // Peach - for page title, menu sections, breadcrumbs
+          tertiary: "#b4befe",   // Lavendar - for link hover/active
+          highlight: "rgba(250, 179, 135, 0.15)", // Peach with opacity - for tag/link shading
+          textHighlight: "#F9E2AF88", // Yellow with opacity
         },
       },
     },
