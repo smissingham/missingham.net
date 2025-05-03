@@ -29,28 +29,28 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          // Catppuccin Latte
-          light: "#EFF1F5",      // Base
-          lightgray: "#4C4F69",  // Text
-          gray: "#5C5F77",       // Subtext1
-          darkgray: "#ACB0BE",   // Surface2
-          dark: "#1E1E2E",       // Crust
-          secondary: "#FE640B",  // Peach - for page title, menu sections, breadcrumbs
-          tertiary: "#DC8A78",   // Rosewater - for link hover/active
-          highlight: "rgba(254, 100, 11, 0.15)", // Peach with opacity - for tag/link shading
-          textHighlight: "#DF8E1D88", // Yellow with opacity
+          // CATPPUCCIN LATTE
+          light: "#dce0e8",         
+          lightgray: "#8c8fa1", // SEARCH BOX  
+          gray: "#5C5F77",           
+          darkgray: "#4c4f69",      // TEXT 
+          dark: "#181825",       
+          secondary: "#8839ef", // PAGE TITLE
+          tertiary: "#7287fd", 
+          highlight: "rgba(114, 135, 253, 0.15)",
+          textHighlight: "#DF8E1D88",
         },
         darkMode: {
-          // Catppuccin Mocha
-          light: "#181825",      // Base
-          lightgray: "#313244",  // Overlay
-          gray: "#6C7086",       // Surface2
-          darkgray: "#BAC2DE",   // Subtext
-          dark: "#CDD6F4",       // Text
-          secondary: "#fab387",  // Peach - for page title, menu sections, breadcrumbs
-          tertiary: "#b4befe",   // Lavendar - for link hover/active
-          highlight: "rgba(250, 179, 135, 0.15)", // Peach with opacity - for tag/link shading
-          textHighlight: "#F9E2AF88", // Yellow with opacity
+          // CATPPUCCIN MOCHA
+          light: "#181825",      // BASE
+          lightgray: "#313244",  // OVERLAY
+          gray: "#6C7086",       // SURFACE2
+          darkgray: "#BAC2DE",   // SUBTEXT
+          dark: "#CDD6F4",       // TEXT
+          secondary: "#ef9f76",  // PEACH - FOR PAGE TITLE, MENU SECTIONS, BREADCRUMBS
+          tertiary: "#ca9ee6",   // LAVENDAR - FOR LINK HOVER/ACTIVE
+          highlight: "rgba(250, 179, 135, 0.15)", // PEACH WITH OPACITY - FOR TAG/LINK SHADING
+          textHighlight: "#F9E2AF88", // YELLOW WITH OPACITY
         },
       },
     },
