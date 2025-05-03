@@ -1,24 +1,32 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-05-02T18:11
+updated: 2025-05-03T10:04
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
 
 # NeoVim
-References: 
+>[!warning]
+> Herein are keymaps specific to my neovim configuration. Many are standard, many are not
+> [Click Here to Browse My Config on Github](https://github.com/search?q=repo%3Asmissingham%2Fnix+path%3Anvim&[type=code)
+
+Helpful References: 
 - https://nix-community.github.io/nixvim/
 - https://dotfyle.com/neovim/plugins/trending
 ## Navigation
 [Which-Key](https://github.com/folke/which-key) plugin shows available shortcuts after leader key press. Common entry points below:
 
-`\` - Leader key, access all shortcuts from here
+`\` - Leader key, access all shortcuts from here (hit it once, then backspace to see ALL available)
+	`\?` - to see buffer-local keymaps
 `\f` - File / Find
 `\s` - Search
 `\g` - Git
 
 ## GoTo
 `$` - Goto end of line
+`K`
+
+
 ### General Operations
 | My Binding | My Verbiage | Default | Mode | Description                                         |
 | ---------- | ----------- | ------- | ---- | --------------------------------------------------- |
@@ -28,6 +36,7 @@ References:
 |            | Copy        | `y`     | V    | "Yank" (copy selected region)                       |
 |            | Cut         | `d`     | V    | "Delete" (cut selected region)                      |
 |            | Paste       | `p`     | V    | "Paste" (paste yanked/deleted at cursor)            |
+|            |             | `K`     | N    | Show definition hover                               |
 ### File / Folder Nav
 | My Binding | My Verbiage    | Default | Description                        |
 | ---------- | -------------- | ------- | ---------------------------------- |
@@ -91,4 +100,27 @@ References:
 ## Todo
 - treesitter tj
 - blinkcmp mrjakob/tj
-- 
+
+
+
+# Avante Nvim
+|Key Binding|Description|
+|---|---|
+|Leaderaa|show sidebar|
+|Leaderat|toggle sidebar visibility|
+|Leaderar|refresh sidebar|
+|Leaderaf|switch sidebar focus|
+|Leadera?|select model|
+|Leaderae|edit selected blocks|
+|LeaderaS|stop current AI request|
+|Leaderah|select between chat histories|
+|co|choose ours|
+|ct|choose theirs|
+|ca|choose all theirs|
+|c0|choose none|
+|cb|choose both|
+|cc|choose cursor|
+|]x|move to previous conflict|
+|[x|move to next conflict|
+|[[|jump to previous codeblocks (results window)|
+|]]|jump to next codeblocks (results windows)|
