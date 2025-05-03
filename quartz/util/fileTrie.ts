@@ -89,6 +89,32 @@ export class FileTrieNode<T extends FileTrieData = ContentDetails> {
     this.insert(file.slug.split("/"), file)
   }
 
+  findNode(path: string[]): FileTrieNode<T> | undefined {
+    if (path.length === 0 || (path.length === 1 && path[0] === "index")) {
+      return this
+    }
+
+    return this.children.find((c) => c.slugSegment === path[0])?.findNode(path.slice(1))
+  }
+
+  ancestryChain(path: string[]): Array<FileTrieNode<T>> | undefined {
+    if (path.length === 0 || (path.length === 1 && path[0] === "index")) {
+      return [this]
+    }
+
+    const child = this.children.find((c) => c.slugSegment === path[0])
+    if (!child) {
+      return undefined
+    }
+
+    const childPath = child.ancestryChain(path.slice(1))
+    if (!childPath) {
+      return undefined
+    }
+
+    return [this, ...childPath]
+  }
+
   /**
    * Filter trie nodes. Behaves similar to `Array.prototype.filter()`, but modifies tree in place
    */
