@@ -68,6 +68,30 @@ type TweenNode = {
   stop: () => void
 }
 
+// workaround for pixijs webgpu issue: https://github.com/pixijs/pixijs/issues/11389
+async function determineGraphicsAPI(): Promise<"webgpu" | "webgl"> {
+  const adapter = await navigator.gpu?.requestAdapter().catch(() => null)
+  const device = adapter && (await adapter.requestDevice().catch(() => null))
+  if (!device) {
+    return "webgl"
+  }
+
+  const canvas = document.createElement("canvas")
+  const gl =
+    (canvas.getContext("webgl2") as WebGL2RenderingContext | null) ??
+    (canvas.getContext("webgl") as WebGLRenderingContext | null)
+
+  // we have to return webgl so pixijs automatically falls back to canvas
+  if (!gl) {
+    return "webgl"
+  }
+
+  const webglMaxTextures = gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS)
+  const webgpuMaxTextures = device.limits.maxSampledTexturesPerShaderStage
+
+  return webglMaxTextures === webgpuMaxTextures ? "webgpu" : "webgl"
+}
+
 async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
@@ -349,6 +373,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   tweens.forEach((tween) => tween.stop())
   tweens.clear()
 
+  const pixiPreference = await determineGraphicsAPI()
   const app = new Application()
   await app.init({
     width,
@@ -357,7 +382,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     autoStart: false,
     autoDensity: true,
     backgroundAlpha: 0,
-    preference: "webgpu",
+    preference: pixiPreference,
     resolution: window.devicePixelRatio,
     eventMode: "static",
   })
@@ -400,7 +425,6 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     })
       .circle(0, 0, nodeRadius(n))
       .fill({ color: isTagNode ? computedStyleMap["--light"] : color(n) })
-      .stroke({ width: isTagNode ? 2 : 0, color: color(n) })
       .on("pointerover", (e) => {
         updateHoverInfo(e.target.label)
         oldLabelOpacity = label.alpha
@@ -415,6 +439,10 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           renderPixiFromD3()
         }
       })
+
+    if (isTagNode) {
+      gfx.stroke({ width: 2, color: computedStyleMap["--tertiary"] })
+    }
 
     nodesContainer.addChild(gfx)
     labelsContainer.addChild(label)
