@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-05-02T08:36
+updated: 2025-05-02T18:11
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -16,6 +16,9 @@ References:
 `\f` - File / Find
 `\s` - Search
 `\g` - Git
+
+## GoTo
+`$` - Goto end of line
 ### General Operations
 | My Binding | My Verbiage | Default | Mode | Description                                         |
 | ---------- | ----------- | ------- | ---- | --------------------------------------------------- |
