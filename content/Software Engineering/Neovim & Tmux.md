@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-05-03T10:04
+updated: 2025-05-04T11:55
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -11,6 +11,7 @@ Herein: mostly shortcuts/how-to notes.
 > [Click Here to Browse My Config on Github](https://github.com/search?q=repo%3Asmissingham%2Fnix+path%3Anvim&[type=code)
 
 Helpful References: 
+- https://vim.rtorr.com/
 - https://nix-community.github.io/nixvim/
 - https://dotfyle.com/neovim/plugins/trending
 ## Navigation
