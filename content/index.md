@@ -11,7 +11,7 @@ tags:
   - linux
   - gen-ai
 created: 2024-12-28T11:00
-updated: 2025-05-03T16:02
+updated: 2025-05-06T08:50
 ---
 Hi, welcome to my *[Digital Garden](https://quartz.jzhao.xyz/philosophy)*, where I keep my public notes on thoughts, experiments, and how-to's.
 
