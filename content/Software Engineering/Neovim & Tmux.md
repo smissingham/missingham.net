@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-05-04T11:55
+updated: 2025-05-06T20:47
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -14,6 +14,7 @@ Helpful References:
 - https://vim.rtorr.com/
 - https://nix-community.github.io/nixvim/
 - https://dotfyle.com/neovim/plugins/trending
+- http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
 ## Navigation
 [Which-Key](https://github.com/folke/which-key) plugin shows available shortcuts after leader key press. Common entry points below:
 
@@ -125,3 +126,5 @@ References:
 |[x|move to next conflict|
 |[[|jump to previous codeblocks (results window)|
 |]]|jump to next codeblocks (results windows)|
+
+http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
