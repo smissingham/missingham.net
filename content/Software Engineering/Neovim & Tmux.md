@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-05-06T20:47
+updated: 2025-05-13T11:44
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -15,18 +15,17 @@ Helpful References:
 - https://nix-community.github.io/nixvim/
 - https://dotfyle.com/neovim/plugins/trending
 - http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
+- https://linuxhandbook.com/move-page-up-down-vim/
 ## Navigation
 [Which-Key](https://github.com/folke/which-key) plugin shows available shortcuts after leader key press. Common entry points below:
 
-`\` - Leader key, access all shortcuts from here (hit it once, then backspace to see ALL available)
-	`\?` - to see buffer-local keymaps
-`\f` - File / Find
-`\s` - Search
-`\g` - Git
-
-## GoTo
-`$` - Goto end of line
-`K`
+| My Binding | My Verbiage | Default | Mode | Description                                     |
+| ---------- | ----------- | ------- | ---- | ----------------------------------------------- |
+| `\`        |             |         | N    | Leader key, access all shortcuts                |
+| `\?`       |             |         | N    | See buffer-local keymaps                        |
+| `\f`       | File/Find   |         | N    | File and find operations                        |
+| `\s`       | Search      |         | N    | Search operations                               |
+| `\g`       | Git         |         | N    | Git operations                                  |
 
 
 ### General Operations
@@ -47,15 +46,35 @@ Helpful References:
 | `\fp`      | Find-Projects  |         | Find Projects                      |
 | `\e`       | Explorer       |         | File Directory Browser             |
 | `\sg`      | Search w/ Grep |         | Find inside files with Grep search |
-### Window / Pane Nav
-`z z` - Center viewport on current line
+### Cursor / Pane Navigation
+| My Binding      | My Verbiage | Default | Mode | Description                        |
+| --------------- | ----------- | ------- | ---- | ---------------------------------- |
+| `z z`           |             |         | N    | Center viewport on current line    |
+| `Ctrl + u`      |             |         | N    | Scroll active pane up              |
+| `Ctrl + d`      |             |         | N    | Scroll active pane down            |
+| `Ctrl-W + HJKL` |             |         | N    | Switch focus between window splits |
+|                 |             | ``      | N    | Go to top of file                  |
 
-- Switch focus between window splits `Ctrl-W + HJKL`
+#### Basic Vim Mode Commands
+| My Binding | My Verbiage | Default | Mode | Description                              |
+| ---------- | ----------- | ------- | ---- | ---------------------------------------- |
+| `i`        |             |         | N    | Insert mode at current position          |
+| `I`        |             |         | N    | Insert at beginning of current line      |
+| `a`        |             |         | N    | Insert after character at current position |
+| `A`        |             |         | N    | Insert at end of current line            |
+#### Line / Word Navigation
+| My Binding | My Verbiage | Default | Mode | Description                              |
+| ---------- | ----------- | ------- | ---- | ---------------------------------------- |
+| `$`        |             |         | N    | Move cursor to end of line               |
+| `^`        |             |         | N    | Move cursor to start of line             |
+| `w`        |             |         | N    | Move cursor to next word start           |
+| `e`        |             |         | N    | Move cursor to next word end             |
+| `W`        |             |         | N    | Move cursor to next word start after whitespace |
+| `E`        |             |         | N    | Move cursor to next word end after whitespace |
+
 #### Tmux-Vim-Navigator
 Switch seamlessly between neovim/tmux panes with: `Ctrl + HJKL`
 
-## File Changes
-`:e!` - Abandon unsaved changes to open file
 # Tmux
 Basic hierarchy: **Session** > **Window** > **Pane**
 References:
