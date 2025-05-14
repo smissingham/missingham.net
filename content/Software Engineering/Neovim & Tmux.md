@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-05-13T11:44
+updated: 2025-05-13T17:08
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -19,25 +19,27 @@ Helpful References:
 ## Navigation
 [Which-Key](https://github.com/folke/which-key) plugin shows available shortcuts after leader key press. Common entry points below:
 
-| My Binding | My Verbiage | Default | Mode | Description                                     |
-| ---------- | ----------- | ------- | ---- | ----------------------------------------------- |
-| `\`        |             |         | N    | Leader key, access all shortcuts                |
-| `\?`       |             |         | N    | See buffer-local keymaps                        |
-| `\f`       | File/Find   |         | N    | File and find operations                        |
-| `\s`       | Search      |         | N    | Search operations                               |
-| `\g`       | Git         |         | N    | Git operations                                  |
+| My Binding | My Verbiage | Default | Mode | Description                      |
+| ---------- | ----------- | ------- | ---- | -------------------------------- |
+| `\`        |             |         | N    | Leader key, access all shortcuts |
+| `\?`       |             |         | N    | See buffer-local keymaps         |
+| `\f`       | File/Find   |         | N    | File and find operations         |
+| `\s`       | Search      |         | N    | Search operations                |
+| `\g`       | Git         |         | N    | Git operations                   |
 
 
 ### General Operations
-| My Binding | My Verbiage | Default | Mode | Description                                         |
-| ---------- | ----------- | ------- | ---- | --------------------------------------------------- |
-|            | Save        | `:w`    | C    |                                                     |
-|            | Quit        | `:q`    | C    |                                                     |
-|            | Reset       | `:e!`   | C    | Resets current buffer (Abandon active file changes) |
-|            | Copy        | `y`     | V    | "Yank" (copy selected region)                       |
-|            | Cut         | `d`     | V    | "Delete" (cut selected region)                      |
-|            | Paste       | `p`     | V    | "Paste" (paste yanked/deleted at cursor)            |
-|            |             | `K`     | N    | Show definition hover                               |
+| My Binding | My Verbiage | Default    | Mode | Description                                         |
+| ---------- | ----------- | ---------- | ---- | --------------------------------------------------- |
+|            | Save        | `:w`       | C    |                                                     |
+|            | Quit        | `:q`       | C    |                                                     |
+|            | Reset       | `:e!`      | C    | Resets current buffer (Abandon active file changes) |
+|            | Copy        | `y`        | V    | "Yank" (copy selected region)                       |
+|            | Cut         | `d`        | V    | "Delete" (cut selected region)                      |
+|            | Paste       | `p`        | V    | "Paste" (paste yanked/deleted at cursor)            |
+|            |             | `K`        | N    | Show definition hover                               |
+|            |             | `u`        | N    | Undo                                                |
+|            |             | `Ctrl + r` | N    | Redo                                                |
 ### File / Folder Nav
 | My Binding | My Verbiage    | Default | Description                        |
 | ---------- | -------------- | ------- | ---------------------------------- |
@@ -53,15 +55,22 @@ Helpful References:
 | `Ctrl + u`      |             |         | N    | Scroll active pane up              |
 | `Ctrl + d`      |             |         | N    | Scroll active pane down            |
 | `Ctrl-W + HJKL` |             |         | N    | Switch focus between window splits |
-|                 |             | ``      | N    | Go to top of file                  |
-
+|                 |             |         | N    | Go to top of file                  |
+#### Flash Navigation
+| My Binding | My Verbiage         | Default | Mode    | Description                       |
+| ---------- | ------------------- | ------- | ------- | --------------------------------- |
+| `s`        | Flash               |         | n, x, o | Jump to target                    |
+| `S`        | Flash Treesitter    |         | n, x, o | Navigate using treesitter         |
+| `r`        | Remote Flash        |         | o       | Remote flash navigation           |
+| `R`        | Treesitter Search   |         | o, x    | Search using treesitter           |
+| `<c-s>`    | Toggle Flash Search |         | c       | Toggle flash search functionality |
 #### Basic Vim Mode Commands
-| My Binding | My Verbiage | Default | Mode | Description                              |
-| ---------- | ----------- | ------- | ---- | ---------------------------------------- |
-| `i`        |             |         | N    | Insert mode at current position          |
-| `I`        |             |         | N    | Insert at beginning of current line      |
+| My Binding | My Verbiage | Default | Mode | Description                                |
+| ---------- | ----------- | ------- | ---- | ------------------------------------------ |
+| `i`        |             |         | N    | Insert mode at current position            |
+| `I`        |             |         | N    | Insert at beginning of current line        |
 | `a`        |             |         | N    | Insert after character at current position |
-| `A`        |             |         | N    | Insert at end of current line            |
+| `A`        |             |         | N    | Insert at end of current line              |
 #### Line / Word Navigation
 | My Binding | My Verbiage | Default | Mode | Description                              |
 | ---------- | ----------- | ------- | ---- | ---------------------------------------- |
@@ -115,15 +124,6 @@ References:
 |            | `Ctrl+B ↑↓←→`      | Change Active    |
 |            | `Ctrl+B x`         | Close Active     |
 |            | `Ctrl+B Ctrl+↑↓←→` | Resize           |
-|            |                    |                  |
-|            |                    |                  |
-
-## Todo
-- treesitter tj
-- blinkcmp mrjakob/tj
-
-
-
 # Avante Nvim
 |Key Binding|Description|
 |---|---|
