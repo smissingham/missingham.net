@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-05-13T17:08
+updated: 2025-05-13T20:48
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -147,3 +147,72 @@ References:
 |]]|jump to next codeblocks (results windows)|
 
 http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
+
+
+# Vimium, Browser Extension
+https://vimium.github.io/
+
+
+## Keyboard Shortcuts
+
+### Navigating the page
+| Key | Action |
+|-----|--------|
+| j | Scroll down |
+| k | Scroll up |
+| gg | Scroll to the top of the page |
+| G | Scroll to the bottom of the page |
+| d | Scroll a half page down |
+| u | Scroll a half page up |
+| h | Scroll left |
+| l | Scroll right |
+| r | Reload the page |
+| yy | Copy the current URL to the clipboard |
+| p | Open the clipboard's URL in the current tab |
+| P | Open the clipboard's URL in a new tab |
+| i | Enter insert mode |
+| v | Enter visual mode |
+| gi | Focus the first text input on the page |
+| f | Open a link in the current tab |
+| F | Open a link in a new tab |
+| gf | Select the next frame on the page |
+| gF | Select the page's main/top frame |
+
+### Using find
+| Key | Action |
+|-----|--------|
+| / | Enter find mode |
+| n | Cycle forward to the next find match |
+| N | Cycle backward to the previous find match |
+
+### Using the omnibar
+| Key | Action |
+|-----|--------|
+| o | Open URL, bookmark or history entry |
+| O | Open URL, bookmark or history entry in a new tab |
+| b | Open a bookmark |
+| B | Open a bookmark in a new tab |
+| T | Search through your open tabs |
+
+### Navigating history
+| Key | Action |
+|-----|--------|
+| H | Go back in history |
+| L | Go forward in history |
+
+### Manipulating tabs
+| Key | Action |
+|-----|--------|
+| t | Create new tab |
+| J | Go one tab left |
+| K | Go one tab right |
+| g0 | Go to the first tab |
+| g$ | Go to the last tab |
+| yt | Duplicate current tab |
+| x | Close current tab |
+| X | Restore closed tab |
+
+### Miscellaneous
+| Key | Action    |
+| --- | --------- |
+| ?   | Show help |
