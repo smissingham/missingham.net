@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-05-13T20:48
+updated: 2025-05-28T08:23
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
@@ -29,17 +29,20 @@ Helpful References:
 
 
 ### General Operations
-| My Binding | My Verbiage | Default    | Mode | Description                                         |
-| ---------- | ----------- | ---------- | ---- | --------------------------------------------------- |
-|            | Save        | `:w`       | C    |                                                     |
-|            | Quit        | `:q`       | C    |                                                     |
-|            | Reset       | `:e!`      | C    | Resets current buffer (Abandon active file changes) |
-|            | Copy        | `y`        | V    | "Yank" (copy selected region)                       |
-|            | Cut         | `d`        | V    | "Delete" (cut selected region)                      |
-|            | Paste       | `p`        | V    | "Paste" (paste yanked/deleted at cursor)            |
-|            |             | `K`        | N    | Show definition hover                               |
-|            |             | `u`        | N    | Undo                                                |
-|            |             | `Ctrl + r` | N    | Redo                                                |
+| My Binding | My Verbiage              | Default         | Mode | Description                                                 |
+| ---------- | ------------------------ | --------------- | ---- | ----------------------------------------------------------- |
+|            | Save                     | `:w`            | C    |                                                             |
+|            | Quit                     | `:q`            | C    |                                                             |
+|            | Reset                    | `:e!`           | C    | Resets current buffer (Abandon active file changes)         |
+|            | Copy                     | `y`             | V    | "Yank" (copy selected region)                               |
+|            | Cut                      | `d`             | V    | "Delete" (cut selected region)                              |
+|            | Paste                    | `p`             | V    | "Paste" (paste yanked/deleted at cursor)                    |
+|            |                          | `K`             | N    | Show definition hover                                       |
+|            |                          | `u`             | N    | Undo                                                        |
+|            |                          | `Ctrl + r`      | N    | Redo                                                        |
+|            | Find & Replace on Line   | `:s/old/new/g`  | N    | Find instances of `old` on current line, replace with `new` |
+|            | Find & Replace in Buffer | `:%s/old/new/g` | N    | Find instances of `old` in buffer, replace with `new`       |
+|            |                          | `yyp`           | N    | Duplicate line under cursor                                 |
 ### File / Folder Nav
 | My Binding | My Verbiage    | Default | Description                        |
 | ---------- | -------------- | ------- | ---------------------------------- |
@@ -56,6 +59,21 @@ Helpful References:
 | `Ctrl + d`      |             |         | N    | Scroll active pane down            |
 | `Ctrl-W + HJKL` |             |         | N    | Switch focus between window splits |
 |                 |             |         | N    | Go to top of file                  |
+
+### Buffer Navigation
+| My Binding | My Verbiage | Default               | Mode | Description                                    |     |
+| ---------- | ----------- | --------------------- | ---- | ---------------------------------------------- | --- |
+|            |             | `:buffer N` or `:b N` | C    | Switch to buffer number N (e.g., `:b 2`)       |     |
+|            |             | `:bnext` or `:bn`     | C    | Move to the next buffer                        |     |
+|            |             | `:bprevious` or `:bp` | C    | Move to the previous buffer                    |     |
+|            |             | `:bfirst` or `:bf`    | C    | Move to the first buffer                       |     |
+|            |             | `:blast` or `:bl`     | C    | Move to the last buffer                        |     |
+|            |             | `:bd`                 | N    | Close current buffer                           |     |
+|            |             | `Ctrl+^`              | N    | Toggle between current and previous buffer     |     |
+|            |             | `Ctrl+o`              | N    | Jump to the previous position in the jump list |     |
+|            |             | `Ctrl+i`              | N    | Jump to the next position in the jump list     |     |
+
+
 #### Flash Navigation
 | My Binding | My Verbiage         | Default | Mode    | Description                       |
 | ---------- | ------------------- | ------- | ------- | --------------------------------- |
