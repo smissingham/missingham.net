@@ -29,27 +29,25 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          // CATPPUCCIN LATTE
-          light: "#dce0e8",         
-          lightgray: "#8c8fa1", // SEARCH BOX  
-          gray: "#5C5F77",           
-          darkgray: "#4c4f69",      // TEXT 
-          dark: "#181825",       
+          light: "white",
+          lightgray: "#8c8fa1", // SEARCH BOX
+          gray: "#5C5F77",
+          darkgray: "#4c4f69", // TEXT
+          dark: "#181825",
           secondary: "#8839ef", // PAGE TITLE
-          tertiary: "#7287fd", 
+          tertiary: "#7287fd",
           highlight: "rgba(114, 135, 253, 0.15)",
           textHighlight: "#DF8E1D88",
         },
         darkMode: {
-          // CATPPUCCIN MOCHA
-          light: "#181825",      // BASE
-          lightgray: "#313244",  // OVERLAY
-          gray: "#6C7086",       // SURFACE2
-          darkgray: "#BAC2DE",   // SUBTEXT
-          dark: "#CDD6F4",       // TEXT
-          secondary: "#ef9f76",  // PEACH - FOR PAGE TITLE, MENU SECTIONS, BREADCRUMBS
-          tertiary: "#ca9ee6",   // LAVENDAR - FOR LINK HOVER/ACTIVE
-          highlight: "rgba(250, 179, 135, 0.15)", // PEACH WITH OPACITY - FOR TAG/LINK SHADING
+          light: "black", // BASE
+          lightgray: "#313244", // OVERLAY
+          gray: "#6C7086", // SURFACE2
+          darkgray: "#BAC2DE", // SUBTEXT
+          dark: "white", // TEXT
+          secondary: "#8E4EC6", // FOR PAGE TITLE, MENU SECTIONS, BREADCRUMBS
+          tertiary: "#ca9ee6", // FOR LINK HOVER/ACTIVE
+          highlight: "rgba(191, 122, 240, 0.15)", // WITH OPACITY - FOR TAG/LINK SHADING
           textHighlight: "#F9E2AF88", // YELLOW WITH OPACITY
         },
       },
