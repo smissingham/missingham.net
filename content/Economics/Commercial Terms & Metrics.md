@@ -1,6 +1,6 @@
 ---
 created: 2025-05-26T20:46
-updated: 2025-05-27T18:34
+updated: 2025-06-03T10:26
 ---
 
 # Revenue
@@ -10,7 +10,6 @@ updated: 2025-05-27T18:34
 - NRR
 - GRR
 - Rule of 40
-- 
 # Finance
 - FCF
 - EBITDA
