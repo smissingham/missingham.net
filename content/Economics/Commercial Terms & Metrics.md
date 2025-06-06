@@ -1,6 +1,6 @@
 ---
 created: 2025-05-26T20:46
-updated: 2025-06-03T10:26
+updated: 2025-06-05T20:08
 ---
 
 # Revenue
@@ -16,7 +16,7 @@ updated: 2025-06-03T10:26
 # Marketing
 - TAM, SAM, SOM
 - NPS
-- 
+- PLG
 
 # Funding, Valuation & Exit Paths
 - PE
