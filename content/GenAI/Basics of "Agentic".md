@@ -1,6 +1,6 @@
 ---
 created: 2025-06-09T15:55
-updated: 2025-06-09T16:46
+updated: 2025-06-09T16:54
 ---
 # What is an "Agent" ?
 Put simply, an agent is an LLM with a persona. Usually, it has some specific expertise and a predisposed objective.
@@ -46,7 +46,7 @@ You ask Claude Desktop (your MCP client) to help you strategise and execute on t
 
 Claude Desktop in this case is an agent, capable of leveraging tools and resources. An example of that flow might be like so:
 
-![[Example Agentic Workflow in Pricing]]
+![[Example Agentic Workflow in Pricing.svg|800]]
 
 In this example, the user asks Claude (an agent) for help designing and implementing the task.
 
