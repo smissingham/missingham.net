@@ -1,6 +1,6 @@
 ---
 created: 2025-02-14T15:44
-updated: 2025-02-14T16:37
+updated: 2025-06-09T15:55
 tags:
   - gen-ai
   - obsidian
@@ -31,9 +31,9 @@ In this example, I've emulated a deep-research style feature, and built it into 
 - Tavily search provider gives my local LLM access to gather data from the internet
 	- I just type the subject of interest that I want to research
 - 3 custom "patterns" work together like an agentic system to provide me desired output
-	- [[research_foundational]]
-	- [[code_snippets]]
-	- [[cite_sources]]
+	- [[_meshai/CustomPatterns/research_foundational]]
+	- [[_meshai/CustomPatterns/code_snippets]]
+	- [[_meshai/CustomPatterns/cite_sources]]
 
 That all took a few minutes to run, cost me nothing, and produced the rather outstanding research note below. 
 
