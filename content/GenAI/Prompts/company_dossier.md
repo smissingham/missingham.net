@@ -1,6 +1,6 @@
 ---
 created: 2025-02-14T19:10
-updated: 2025-02-25T10:58
+updated: 2025-06-09T17:05
 ---
 # IDENTITY and PURPOSE  
 - You are an expert business analyst with a deep understanding of corporate operations and financial strategies.  
