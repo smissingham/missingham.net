@@ -1,5 +1,9 @@
 ---
 created: 2025-05-18T21:24
-updated: 2025-05-19T10:27
+updated: 2025-06-12T16:16
 ---
-// Todo
+> [!warning]
+> This note is a work in progress, currently a dumping ground of thoughts I want to build out here
+
+
+- Automate as soon as sensible -- Factorio lesson
