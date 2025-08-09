@@ -2,7 +2,7 @@
 tags:
   - backlog
 created: 2025-01-03T12:36
-updated: 2025-04-07T16:27
+updated: 2025-06-28T11:24
 ---
 Where I list things that I want/intend to read, watch, research or otherwise consume 
 ___
@@ -45,6 +45,8 @@ ___
 - Why Obsidian over Notion, OneNote, Evernote etc.
 - inconvenient truth about Elasticity 
 - The difference between architecture and strategy
+- AI has democratised the smart stuff, that education used to gatekeep
+
 ## General Interest
 - [ ] DataFrame cheat sheets
 - [ ] [[Agile Software Development, a Rock Climbing Analogy]]

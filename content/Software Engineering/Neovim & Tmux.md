@@ -1,6 +1,6 @@
 ---
 created: 2025-04-25T08:21
-updated: 2025-05-28T08:23
+updated: 2025-08-09T12:23
 ---
 Dumping ground for my notes as I learn, and configure my own NeoVim.
 Herein: mostly shortcuts/how-to notes.
