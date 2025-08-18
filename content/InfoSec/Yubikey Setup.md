@@ -1,16 +1,18 @@
 ---
 created: 2025-08-17T09:11
-updated: 2025-08-17T11:32
+updated: 2025-08-17T17:20
 ---
-# Getting Started
+# Setup PIV with Yubikey CLI Tools
+ Note, this is all about using Yubikey for PIV (Personal Identity Verification).
+ Yubikey's support many other protocols, which will in future get a space in this doc.
+## Getting Started
 - Requires [`yubico-piv-tool`](https://developers.yubico.com/yubico-piv-tool/)
 	- Available on [Nixpkgs](https://search.nixos.org/packages?show=yubico-piv-tool)
-
-# Optional: Reset the Yubikey
+## Resetting the Yubikey
 ```bash
 yubico-piv-tool -a reset
 ```
-# Update the Default Credentials
+## Updating Default Credentials
 #### Show the current pin status 
 ```bash
 yubico-piv-tool -a status
@@ -49,11 +51,11 @@ Keep it on clipboard, you'll need it many times in next steps
 MGMT_KEY=$(echo -n "YourPasswordHere" | openssl dgst -sha256 | cut -d' ' -f2 | head -c 48)
 echo $MGMT_KEY
 ```
-
-#### Set the PIV Management Key
+#### Apply the new Management Key
 ```bash
 yubico-piv-tool -a set-mgm-key -n "$MGMT_KEY"
 ```
+
 #### Generate RSA Key Pair in Slot 9a (PIV Auth Slot)
 Generates a 4096-bit RSA key pair for PIV authentication. 
 ```bash
@@ -104,6 +106,11 @@ yubico-piv-tool -a status \
 && \
 yubico-piv-tool -a read-certificate -s 9a
 ```
+
+#### Set the Yubikey's Touch Policy for this Key
+```bash
+## TBD
+```
 #### Keep Generated PEM Files
  `public_key.pem`
 	- **What it is:** The public portion of your RSA key pair  
@@ -116,3 +123,17 @@ yubico-piv-tool -a read-certificate -s 9a
 **Bottom line:** Keep both files. They're small and may be needed for SSH configs, other encryption tools, certificate management, or recreating your setup.
 # Optional Extra: Use it with Sops
 See [[Configuring Sops Encryption with Yubikeys]]
+
+
+
+
+
+
+
+# UPDATED: Using ykman...
+
+Reset the PIV configuration:
+`ykman piv reset`
+
+Set a new management key:
+`ykman piv access change-management-key --generate --protect`
