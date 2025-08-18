@@ -1,6 +1,6 @@
 ---
 created: 2025-08-17T09:11
-updated: 2025-08-17T17:20
+updated: 2025-08-17T23:21
 ---
 # Setup PIV with Yubikey CLI Tools
  Note, this is all about using Yubikey for PIV (Personal Identity Verification).
@@ -137,3 +137,32 @@ Reset the PIV configuration:
 
 Set a new management key:
 `ykman piv access change-management-key --generate --protect`
+
+
+## PIV
+- 9a - PIV Authentication
+	- Algorithm: RSA 4096
+	- Purpose: User Authentication
+		- SSH login to servers
+	- Key Origin: Generated once with software, cloned across yubikeys
+- 9c - Digital Signature
+	- Algorithm: RSA 4096
+	- Purpose: Digital Signing
+		- Profession software distribution, requiring serious PIV
+	- Generated once with software, cloned across yubikeys
+- 9d - Key Management
+	- Currently unused
+- 9e - Card Authentication
+	- Currently unused
+
+
+
+age-plugin-yubikey
+
+generates age and stores in retired management key PIV space
+https://developers.yubico.com/PIV/Introduction/Certificate_slots.html
+
+SOPS_AGE_KEY_FILE
+
+sops -e -i someFile.txt to encrypt file in place (overwrite)
+sops -d someFile.txt to decrypt and print to stdout
