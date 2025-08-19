@@ -1,6 +1,6 @@
 ---
 created: 2025-08-17T08:02
-updated: 2025-08-18T18:29
+updated: 2025-08-18T18:45
 ---
 # Resources
 - https://crates.io/crates/age-plugin-yubikey/0.3.3
@@ -9,7 +9,7 @@ updated: 2025-08-18T18:29
 # Getting Started
 - Requires `openssl` package to be installed
 - Requires a valid `sops` encryption setup already working
-- Assumes yubikey + sops configuration & shell helpers in place from [[Yubikey Setup]]
+- Assumes yubikey + sops configuration & shell helpers in place from [[Yubikey Setup - PIV]]
 # Generate Private Key & CSR
 ## Navigate to a directory where keys will be stored
 ```bash
@@ -145,8 +145,7 @@ openssl dgst \
   -signature "somefile.txt.sig" \
   "somefile.txt"
 ```
-
-# Random Extras
+# Other Extras
 ## Generate PubKey from Yubikey
 Assuming the yubikey already has cert and private key, you can generate the pubkey from there
 ```bash
