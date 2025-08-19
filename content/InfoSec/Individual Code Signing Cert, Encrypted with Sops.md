@@ -1,7 +1,11 @@
 ---
 created: 2025-08-17T08:02
-updated: 2025-08-18T12:25
+updated: 2025-08-18T18:29
 ---
+# Resources
+- https://crates.io/crates/age-plugin-yubikey/0.3.3
+- https://github.com/getsops/sops
+- https://developers.yubico.com/PIV/Introduction/Certificate_slots.html
 # Getting Started
 - Requires `openssl` package to be installed
 - Requires a valid `sops` encryption setup already working
@@ -18,37 +22,137 @@ All subsequent sops commands will be affected until terminal restart
 ```bash
 yk-sops
 ```
-## Generate Private Key and CSR
+## Generate Encrypted Private Key
 #### Generate private key straight into sops encrypted file
 Going straight to encrypted sops file keeps the private key from ever touching disk/clipboard
 ```bash
-openssl genrsa 4096 | sops -e code-signing-key.pem.enc
+openssl genrsa 4096 | sops -e /dev/stdin > codesign-key.enc
 ```
 #### Unlock yubikey pin by decrypting the file once
 Next steps don't work well with unlocking the yubikey pin, do it once here and as long as the policy doesn't need pin every time we're fine.
 Note, yubikey touch "always" policy still works, it's just the pin that has issues in following steps
 ```bash
-sops -d code-signing-key.pem.enc >/dev/null 
+sops -d codesign-key.enc >/dev/null 
 ```
-#### Optional: Push private key to yubikey
+## Generate Certificate Signing Request (CSR)
+Following commands assume there is a local config file like so:
+```bash
+# ./codesign-req.csr
+
+[req]
+prompt = no
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+
+[req_distinguished_name]
+C = US
+ST = Illinois
+L = Chicago
+O = Sean Missingham
+OU = Software Development
+CN = Sean Missingham
+emailAddress = sean@missingham.com
+
+[v3_req]
+keyUsage = digitalSignature
+extendedKeyUsage = codeSigning
+```
+#### Generate Certificate Signing Request (CSR)
+If this asks for the yubikey pin, cancel and rerun the above before retrying
+```bash
+sops -d codesign-key.enc | openssl req -new \
+  -key /dev/stdin \
+  -config codesign-req.conf \
+  -out codesign-req.csr
+```
+#### Verify the CSR generated successfully
+```bash
+openssl req -in codesign-req.csr -text -noout
+```
+
+# Optional: Generate Self Signed Cert 
+Might be useful to sign before the CA cert is acquired. 
+To generate a self signed certificate, follow this instruction then jump to "saving the cert", noting the different out file name.
+## Generate the Signing Cert
+```bash
+sops -d codesign-key.enc | openssl x509 -req \
+  -in codesign-req.csr \
+  -signkey /dev/stdin \
+  -out codesign-self.crt \
+  -days 365
+```
+## Generate the Public Key from Signing Cert
+```bash
+openssl x509 \
+  -in codesign-self.crt \
+  -pubkey \
+  -noout \
+  >codesign-self.pub
+```
+## Optional: Print the pubkey from Yubikey to crosscheck
+```bash
+ykman piv keys export 9c -
+```
+# Order Signing Cert from Certificate Authority (CA)
+https://www.sectigo.com/ssl-certificates-tls/code-signing
+## Submit to CA
+- Fill in CA signing info as was configured in local csr req conf.
+- Be ready to provide proof of address and identity
+## Save back signed cert
+- Save the signed cert file and public key to same directory as other codesign-* artifacts
+- For consistency with below commands, use following names if desired
+	- `codesign-ca.crt` - The CA signing certificate
+	- `codesign-ca.pub` - The public key provided alongside CA cert
+# Optional: Save Key & Cert to Yubikey Slot 9c
+## Push private key to yubikey signing slot 9c
 Decrypts the file and pipes it over stdout.
 Again, the private key never touches disk.
 ```bash
 # Now we can decrypt it and send straight to ykman
-sops -d code-signing-key.pem.enc | ykman piv keys import 9c /dev/stdin
+sops -d codesign-key.enc | ykman piv keys import 9c /dev/stdin
 ```
-#### Generate Certificate Signing Request (CSR) using private key
+## Push signed certificate to slot 9c
 ```bash
-openssl req -new -key code-signing-key.pem -out code-signing.csr
+ykman piv certificates import 9c codesign-ca.crt
 ```
-#### Verify the CSR generated successfully
+# Signing
+## Signing with the Yubikey slot 9c (Preferred)
+Signing this way keeps the private key securely contained on the yubikey instead of decrypting it into stdio or a local file
 ```bash
-openssl req -in code-signing.csr -text -noout | grep "Public-Key"
+yubico-piv-tool \
+  -a verify-pin \
+  --sign \
+  -s 9c \
+  -H SHA512 \
+  -A RSA4096 \
+  -i somefile.txt \
+  -o somefile.sig
+```
+## Signing with the encrypted file
+```bash
+sops -d codesign-key.enc | openssl dgst \
+  -sha512 \
+  -sign /dev/stdin \
+  -out "somfile.txt.sig" \
+  "somefile.txt"
+```
+## Validate Signed File
+```bash
+openssl dgst \
+  -sha512 \
+  -verify \
+  codesign-ca.pub \
+  -signature "somefile.txt.sig" \
+  "somefile.txt"
 ```
 
-## Optionally Encrypt the Private Key with Sops
+# Random Extras
+## Generate PubKey from Yubikey
+Assuming the yubikey already has cert and private key, you can generate the pubkey from there
 ```bash
-sop
+openssl dgst \
+  -sha512 \
+  -verify pubkey.pem \
+  -signature somefile.sig \
+  -binary somefile.txt
 ```
-
-# Order Signing Cert from Certificate Authority (CA)
