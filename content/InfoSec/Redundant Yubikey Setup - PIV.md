@@ -1,6 +1,6 @@
 ---
 created: 2025-08-17T09:11
-updated: 2025-08-18T18:47
+updated: 2025-08-19T11:33
 ---
 This page is exclusively about my use case with PIV (Personal Identity Verification)
 Yubikey's do a lot more than this (PIV, FIDO/U2F, OATH and more.)
@@ -8,7 +8,7 @@ I'll likely do write-ups on those soon.
 # My Objectives 
 I set out to set up a redundant set of yubikeys for two primary, and some bonus purposes:
 - Primary:
-	- Use as private key storage for [[Sops]] encrypt/decrypt
+	- Use as private key storage for [[SOPS]] encrypt/decrypt
 	- Use for signing software with proof id ID
 - Secondary:
 	- Git & other signing
@@ -17,10 +17,33 @@ I set out to set up a redundant set of yubikeys for two primary, and some bonus 
 Yubikey supports all of these things via the PIV protocol.
 Note, yubikey's store PIV key/cert pairs in "slots", which are documented [here]( https://developers.yubico.com/PIV/Introduction/Certificate_slots.html)
 # Resources
-- [[Individual Code Signing Cert, Encrypted with Sops]]
+- [[Encrypted Individual Code Signing Cert With Yubikeys]]
 - https://crates.io/crates/age-plugin-yubikey/0.3.3
 - https://github.com/getsops/sops
 - https://developers.yubico.com/PIV/Introduction/Certificate_slots.html
+# Resulting .sops.yaml
+By using the scripts below, I generated unique age keys directly on each yubikey. Then, we can use those age identities with a sops configuration to allow any key of the four to encrypt/decrypt files with sops. Here's the .sops.yaml config I ended up with, which lets me do so
+```yaml
+keys:
+  - &yubikeys:
+    - &yb_5c_kyr age1yubikey1qv...
+    - &yb_5c_nfc age1yubikey1q0...
+    - &yb_5c_bk1 age1yubikey1qg...
+    - &yb_5c_bk2 age1yubikey1qd...
+creation_rules:
+  - path_regex: .*
+    skip_undetected_keys: true
+    key_groups:
+      - age:
+          - *yb_5c_kyr
+          - *yb_5c_nfc
+          - *yb_5c_bk1
+          - *yb_5c_bk2
+```
+
+Now, using this redundant set of keys I can encrypt/decrypt files with [[SOPS]]. 
+
+First order of business was [[Encrypted Individual Code Signing Cert With Yubikeys]]
 # Bash Scripts
 ## YK Helpers
 Full of yubikey related shorthand helpers. Source this into env to use it

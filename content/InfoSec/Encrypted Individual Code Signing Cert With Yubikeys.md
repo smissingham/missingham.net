@@ -1,15 +1,41 @@
 ---
 created: 2025-08-17T08:02
-updated: 2025-08-18T18:45
+updated: 2025-08-19T11:34
 ---
 # Resources
 - https://crates.io/crates/age-plugin-yubikey/0.3.3
 - https://github.com/getsops/sops
 - https://developers.yubico.com/PIV/Introduction/Certificate_slots.html
+# Objective
+I want to use my redundant [[Redundant Yubikey Setup - PIV|Yubikey Setup]] to digitally sign code files. Below is a list of what I managed.
+
+Note that with my yubikey setup, I can sops+age encrypt/decrypt any file with any of the four yubikey devices.
+
+- Must Haves:
+	- ✅ Able to directly sign files using Yubikey, where the private key never leaves the Yubikey hardware device
+	- ✅ Same code-signing key available for use across redundant set of hardware keys, for redundancy
+- Nice to Haves
+	- ✅ Use private key directly to sign files, without yubikey
+		- ✅ Private key MUST stay encrypted throughout this process
+		- ✅ Private key, and cert stay on yubikey device, should I ever need to sign from a device I don't own (unlikely though)
+	- ✅ Pave foundation for ancillary Yubikey PIV slots for other uses
+		- SSH identity validation
+		- Git commit signing 
+- Sacrifices
+	- In order for multiple Yubikeys to share the same signing key/cert pair, minor sacrifices had to be made
+		- The private key used for signing was generated using my terminal
+			- This is less secure than generating it directly on the yubikey and keeping it there (but then they can't share)
+		- I kept the private key encrypted every time I touched it in terminal
+			- I exclusively handled it via stdio, never to disk or clipboard or temp-filesystems
+			- I try only to use the yubikeys for signing, avoiding touching the on-disk encrypted private key wherever possible
+		- I want to back up the signing cert. I have it saved to a cloud location I won't specify.
+		- It costs a hefty sum to have a signing certificate validated by a certificate authority, it would suck to lose it.
+		- I wipe/reset my devices often, so  I need to be able to restore it
+		- I need to use it on my laptop, or my desktop, because I write/build software on both
 # Getting Started
 - Requires `openssl` package to be installed
 - Requires a valid `sops` encryption setup already working
-- Assumes yubikey + sops configuration & shell helpers in place from [[Yubikey Setup - PIV]]
+- Assumes yubikey + sops configuration & shell helpers in place from [[Redundant Yubikey Setup - PIV]]
 # Generate Private Key & CSR
 ## Navigate to a directory where keys will be stored
 ```bash
