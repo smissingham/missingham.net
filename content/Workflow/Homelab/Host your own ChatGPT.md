@@ -2,9 +2,9 @@
 tags:
   - how-to
 created: 2024-11-10T10:47
-updated: 2024-11-10T10:47
+updated: 2025-08-19T14:34
 ---
-Here's an example [docker-compose](Docker-Compose) configuration for running two containers:
+Here's an example [docker-compose](Docker-Compose.md) configuration for running two containers:
 - [Ollama](https://ollama.com/): Open source runtime for running LLM's on your own hardware
 - [OpenWebUI](https://docs.openwebui.com/): "Self-hosted AI interface designed to operate entirely offline"
 

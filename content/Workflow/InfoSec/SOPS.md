@@ -1,6 +1,6 @@
 ---
 created: 2025-08-18T18:47
-updated: 2025-08-19T11:34
+updated: 2025-08-19T11:40
 ---
 # What Is SOPS
 "Secret Operations" (SOPS) is a cli tool for securely managing secrets, with nice compatibility for structured files like yaml, json etc.
@@ -12,7 +12,7 @@ Sops itself is not the encryption mechanism, its just the provider of the intell
 Sops is used in conjunction with actual encryption backends, such as **age** (which I use), **PGP/GPG** and others. 
 These backends actually do the encryption/decryption, while sops provides the file-handling smarts.
 # How I Use SOPS
-Firstly, I use sops with the [[#Resources#Age|Age]] file encryption backend. For the rest of this document, when I say "sops", know that I'm using it with age.
+Firstly, I use sops with the [Age](https://github.com/FiloSottile/age) file encryption backend. For the rest of this document, when I say "sops", know that I'm using it with age.
 ## General File Encryption
 First and foremost, I use sops+age for all general file encryption, even if it's a regular text file and not some config file.
 Most online guides show how to encrypt an existing file and put the contents back to a file, but personally I prefer to work directly with *stdio*, this way you can prevent sensitive content ever touching the disk/clipboard.
