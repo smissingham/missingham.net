@@ -1,6 +1,6 @@
 ---
 created: 2025-08-17T09:11
-updated: 2025-08-19T11:33
+updated: 2025-08-22T08:03
 ---
 This page is exclusively about my use case with PIV (Personal Identity Verification)
 Yubikey's do a lot more than this (PIV, FIDO/U2F, OATH and more.)
@@ -44,6 +44,11 @@ creation_rules:
 Now, using this redundant set of keys I can encrypt/decrypt files with [[SOPS]]. 
 
 First order of business was [[Encrypted Individual Code Signing Cert With Yubikeys]]
+# Important Note
+The standard yubikey slot for encryption purposes is 9d.
+I originally pushed the age keys to that slot, and it worked, until I added a signing cert to 9c that used the RSA algorithm. 
+
+There seems to be a bug with age-plugin-yubikey, because it started throwing errors as soon as I had keys on piv slots that didn't use ECCP algorithm, hence leaving it in "retired" slot 82, where the plugin cli tool is happy using it.
 # Bash Scripts
 ## YK Helpers
 Full of yubikey related shorthand helpers. Source this into env to use it
