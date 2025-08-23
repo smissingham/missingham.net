@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { COLORS } from "./const"
 
 /**
  * Quartz 4 Configuration
@@ -29,26 +30,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "white",
-          lightgray: "#8c8fa1", // SEARCH BOX
-          gray: "#5C5F77",
-          darkgray: "#4c4f69", // TEXT
-          dark: "#181825",
-          secondary: "#8839ef", // PAGE TITLE
-          tertiary: "#7287fd",
-          highlight: "rgba(114, 135, 253, 0.15)",
-          textHighlight: "#DF8E1D88",
+          light: COLORS.gruvbox.light0_hard, // BASE
+          lightgray: COLORS.gruvbox.light3, // SEARCH BOX
+          gray: COLORS.gruvbox.light4,
+          darkgray: COLORS.gruvbox.dark2, // TEXT
+          dark: COLORS.gruvbox.dark0,
+          secondary: COLORS.gruvbox.neutral_blue, // PAGE TITLE
+          tertiary: COLORS.gruvbox.bright_blue,
+          highlight: COLORS.gruvbox.bright_blue + "26", // WITH OPACITY - FOR TAG/LINK SHADING
+          textHighlight: COLORS.gruvbox.bright_yellow + "88", // YELLOW WITH OPACITY
         },
         darkMode: {
-          light: "black", // BASE
-          lightgray: "#313244", // OVERLAY
-          gray: "#6C7086", // SURFACE2
-          darkgray: "#BAC2DE", // SUBTEXT
-          dark: "white", // TEXT
-          secondary: "#8E4EC6", // FOR PAGE TITLE, MENU SECTIONS, BREADCRUMBS
-          tertiary: "#ca9ee6", // FOR LINK HOVER/ACTIVE
-          highlight: "rgba(191, 122, 240, 0.15)", // WITH OPACITY - FOR TAG/LINK SHADING
-          textHighlight: "#F9E2AF88", // YELLOW WITH OPACITY
+          light: COLORS.gruvbox.dark0, // BASE
+          lightgray: COLORS.gruvbox.dark2, // OVERLAY
+          gray: COLORS.gruvbox.dark4, // SURFACE2
+          darkgray: COLORS.gruvbox.light3, // TEXT
+          dark: COLORS.gruvbox.light0_soft, // HEADER TEXT
+          secondary: COLORS.gruvbox.faded_yellow, // FOR PAGE TITLE, MENU SECTIONS, BREADCRUMBS
+          tertiary: COLORS.gruvbox.bright_purple, // FOR LINK HOVER/ACTIVE
+          highlight: COLORS.gruvbox.bright_orange + "26", // WITH OPACITY - FOR TAG/LINK SHADING
+          textHighlight: COLORS.gruvbox.bright_yellow + "88", // YELLOW WITH OPACITY
         },
       },
     },
