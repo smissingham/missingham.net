@@ -1,6 +1,6 @@
 ---
 created: 2024-12-28T11:04
-updated: 2025-08-19T15:59
+updated: 2025-08-25T19:20
 ---
 # Overview
 "Nix" can mean a lot of things. It's essentially an ecosystem of associated tools. Here's the digest:
@@ -44,10 +44,11 @@ updated: 2025-08-19T15:59
 	- This means you can be a polyglot developer working on many projects, each using many versions of binaries like node, python, rust etc. and never worry about version conflicts with your currently installed SDK. Each project gets its own local SDK configuration
 - These are particularly powerful when combined with **direnv**, which can automatically start your nix shell when you open a directory containing a nix shell
 ## Bonus: Nixpacks
-- **Nixpacks** is less commonly known, but is becoming more popular as a way to create docker images using Nix under the hood
-- This enables developers to create OCI compliant container images, but do so with the Nix language and nixpkgs software repository
-	- This means you get all of the benefits of a declarative software packaging process, and trusted software packages that are more protected from supply chain attacks, but still leverage the maturity of massive container runtimes like docker/podman/kubernetes
-	- Personally, I haven't used this yet but next time I have to build a docker image I intend to try it out, I love the concept
+- **Nixpacks** is less commonly known, but is becoming more popular as a way to create docker images
+- In my books, this isn't really nix. It doesn't use the nix language or packaging process, it just leverages the nix packages repository for bundled dependencies 
+- nixpacks uses a toml configuration file, and somewhat self determines dependencies with the ability to further configure them
+- There are alternatives, for a more nix authentic experience to achieve the same goal, namely "nix2container" and nix "dockertools"
+    - This, combined with a nix dev flake would be my preferred option, given that it jives with the dev flake I already use in the project and allows me to be more explicit with the build process and dependencies rather than abstracting it out to another configuration language 
 # My Usage
 Just about all of my nix configuration mentioned below, I keep in a git repository:
 	[Sean Missingham's Nix Configuration](https://github.com/smissingham/nix)
