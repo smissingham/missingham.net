@@ -1,7 +1,13 @@
 ---
 created: 2025-08-17T08:02
-updated: 2025-08-22T08:03
+updated: 2025-08-30T10:54
 ---
+> [!warning] 
+> The steps below around CSR generation and CA were outdated before I even started this, unbeknownst to me.
+> 
+> The modern way this is done is all handled on the CA side, they will use a hardware token to generate a key pair, then they'll issue a certificate against that and they'll ship you the hardware token to use for signing.
+> 
+> With that said, all of the steps below are still useful for other similar use cases such as generating SSH keys, email signing keys etc.
 # Resources
 - https://crates.io/crates/age-plugin-yubikey/0.3.3
 - https://github.com/getsops/sops
