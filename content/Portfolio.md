@@ -1,7 +1,12 @@
 ---
 created: 2025-03-12T11:28
-updated: 2025-03-12T13:13
+updated: 2025-09-01T15:05
 ---
+# Public Profiles
+Much of my work is closed source, as most of my career has been working on proprietary SaaS.
+With that said, you can see some of my public works linked below.
+- [Pricefx Gitlab Profile](https://gitlab.pricefx.eu/users/sean.missingham/contributed)
+- [Public GitHub Profile](https://github.com/smissingham)
 # Noteworthy Projects
 ## [Pricefx Login Vault](https://chromewebstore.google.com/detail/pricefx-vault/jfbbihaiagnjdonfihekeeklcjmbljih) (2019 - Present)
 This is likely my most notable project that is available publicly.
