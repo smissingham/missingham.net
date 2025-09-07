@@ -1,9 +1,10 @@
 ---
 created: 2025-03-12T11:28
-updated: 2025-09-01T15:05
+updated: 2025-09-06T17:49
 ---
 # Public Profiles
-Much of my work is closed source, as most of my career has been working on proprietary SaaS.
+Much of my career has been working on proprietary SaaS, and therefore some of my best works are not available in the public domain.
+
 With that said, you can see some of my public works linked below.
 - [Pricefx Gitlab Profile](https://gitlab.pricefx.eu/users/sean.missingham/contributed)
 - [Public GitHub Profile](https://github.com/smissingham)
