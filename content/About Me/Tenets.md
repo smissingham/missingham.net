@@ -1,11 +1,11 @@
 ---
 created: 2025-09-06T15:02
-updated: 2025-09-06T18:53
+updated: 2025-09-07T09:45
 ---
 # Core Principles
 > Knowledge is the greatest wealth, and just like money we grow our knowledge bank best when we share.
 > 
-> If I can condense and hour of my research time into 5 minutes of your learning time, and you can do the same for me, then together we can be greater than the sum of our parts.
+> If I can condense an hour of my research time into 5 minutes of your learning time, and you can do the same for me, then together we can be greater than the sum of our parts.
 
 > Resources must be publicly available and openly permissive.
 >
