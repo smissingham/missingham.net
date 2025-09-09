@@ -1,6 +1,6 @@
 ---
 created: 2025-09-06T15:02
-updated: 2025-09-07T09:45
+updated: 2025-09-08T12:49
 ---
 # Core Principles
 > Knowledge is the greatest wealth, and just like money we grow our knowledge bank best when we share.
@@ -10,7 +10,7 @@ updated: 2025-09-07T09:45
 > Resources must be publicly available and openly permissive.
 >
 > I want all of my material to be accessible to anybody, regardless of their background or their finances.
-> While I welcome and appreciated financial support, I will always endeavour to release my own content and creations with open permissive license.
+> While I welcome and appreciate financial support, I will always endeavour to release my own content and creations with open permissive license.
 > 
 > If content is locked behind pay walls, then newcomers to the industry with limited finances cannot grow like I have been able to.
 
