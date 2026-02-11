@@ -3,12 +3,12 @@ id: Demonstrating Software
 aliases: []
 tags: []
 created: 2026-02-10T15:30
-updated: 2026-02-10T15:38
+updated: 2026-02-11T10:15
 ---
 
 # Preamble
 
-Whether you're sharing a cool new tool you found with colleagues, or selling
+Whether you're sharing a cool new tool with colleagues, or selling
 enterprise software to C-Suite fortune-500 execs, there is an art to demonstrating
 software in an impactful way, and it's harder than you might think at first.
 
@@ -26,7 +26,7 @@ getting to the point.
 > [!important] During all moments possible, in prep and live, ask yourself (as if you are your audience) "So What!?".
 
 The point here is that the answer to that question is the thing you most need to convey.
-Often times, that could be quantitative value in $, other times it could be qualitative time-savings or efficiency benenfits.
+Often times, that could be quantitative value in $, other times it could be qualitative time-savings or efficiency benefits.
 
 Either way, the critical thing to anchor yourself to is your audience's perspective of "why do I care about this?".
 
@@ -35,10 +35,18 @@ Either way, the critical thing to anchor yourself to is your audience's perspect
 Even if your audience explicitly asked to see how it works, or how it comes together,
 they don't need to see how it works. Not yet.
 
-> [!important] The how is only of interest to your audience once they've already come to believe that what you're showing is for them!
+> [!important] The "how" is only of interest to your audience _after_ they've already come to believe that what you're showing is for them!
 
 Refer back to "So What". Focus on value, on outcomes, on benefits, and only resort to showing
 the "How" once your audience has already committed themself to the belief that this IS for them.
+
+I prefer to backlog the sausage making showcases to second or third steps, only once
+you've won the hearts and minds.
+
+With this all said, don't avoid showing them *how* they will **use** the system. 
+They need to see themselves using the tool, and understand how they will use it for their work. 
+Be careful here, stay only to critical elements of a day in their life, and don't 
+delve into the "how it works". This is key to differentiate.
 
 ## Show the last thing first
 
@@ -59,7 +67,7 @@ So, show them the outcomes, the destination, the "So What". And THEN you can go 
 Importantly, don't devolve to sausage making! Still remain focused on the "So What", but when showing the journey
 you're now able to show the high impact but lower-level features/functions they'll see along the journey to the destination.
 
-## End on something exhilirating
+## End on something exhilarating
 
 > [!important] Nothing kills a great demo like ending on something ill-defined or boring.
 
